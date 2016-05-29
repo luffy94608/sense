@@ -1,0 +1,76 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ */
+@import "variables";
+@import "icons";
+
+.clear-fix:after{
+  clear:both;
+  content:".";
+  display:block;
+  height:0;
+  visibility:hidden;
+}
+.fl{
+  float: left!important;
+}
+.fr{
+  float: right!important;
+}
+
+//text
+.text-left{
+  text-align: left;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.text-ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text-decoration-none{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+.gone{
+  display: none;
+}
+
+//color
+.color-orange{
+  color: $text-6;
+}
+
+.bg-white{
+  background-color: $text-5;
+}
+
+//border
+.border-top-grey{
+  border-top: 1px solid $border-color;
+}
+.border-right-grey{
+  border-right: 1px solid $border-color;
+}
+.border-bottom-grey{
+  border-bottom: 1px solid $border-color;
+}
+.border-left-grey{
+  border-left: 1px solid $border-color;
+}
+
+//margin
+.margin-t-10{
+  margin-top: 10px;
+}
+.margin-t-20{
+  margin-top: 20px;
+}

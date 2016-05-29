@@ -1,0 +1,86 @@
+
+//轮播图
+.sn-swiper-item{
+  background-color: $bg-color-4;
+  .sn-si-title{
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    font-size: 2rem;
+
+    width: 270px;
+    color: $text-5;
+    @include transform(translateY(-50%));
+    &>p:first-child{
+      font-size: 3rem;
+      font-weight: bolder;
+      margin-bottom: 10px;
+    }
+  }
+  &>img{
+    width: 100%;
+  }
+}
+
+//首页列表内容
+.sn-phc-menu{
+  height: 260px;
+  padding: 10px 0;
+  background-color: $bg-color-4;
+  .sn-phcm-title{
+    color: $text-8;
+    font-size: 2.4rem;
+  }
+  .sn-phcm-list{
+    margin-top: 50px;
+    width: 100%;
+    display: table;
+    li{
+      display: table-cell;
+      width: 25%;
+      a{
+        color: $text-1;
+      }
+      img{
+        width: 96px;
+      }
+    }
+  }
+}
+
+.sn-phc-item{
+  padding: 30px 0;
+  .snphc-desc{
+    width: 500px;
+    .snphc-tag{
+      width: 192px;
+      height: 107px;
+      line-height: 140px;
+      color: $text-5;
+      font-size: 2.9rem;
+      font-weight: bolder;
+      text-indent: 1.2em;
+      display: inline-block;
+      background: url("../images/home/cloud_blue.png") no-repeat center;
+    }
+    .snphc-title{
+      margin-top: 10px;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+    .snphc-abstract{
+      font-size: 1.6rem;
+    }
+    .snphc-link{
+      margin-top: 15px;
+       &>a{
+         font-size: 1.6rem;
+       }
+    }
+  }
+  .snphc-img{
+    img{
+      width: 400px;
+    }
+  }
+}

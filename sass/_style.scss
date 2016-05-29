@@ -1,0 +1,321 @@
+html{
+  font-family: Open Sans,Helvetica,Arial,sans-serif;
+  font-size:  62.5%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: $text-1;
+  background-color: $text-5;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+.container{
+
+}
+.wrap{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+//header
+.sn-header{
+  position: fixed;
+  width: 100%;
+  $height : 75px;
+  height: $height;
+  @include opacity(0.9);
+  z-index: 2;
+  .logo{
+    padding-top: 9px;
+    img{
+      display: inline-block;
+    }
+    &>img{
+      height: 45px;
+      position: relative;
+      top: 5px;
+    }
+    .logo-txt{
+      display: inline-block;
+       img{
+         position: relative;
+         left: 0;
+         width: 34px;
+         height: 34px;
+         @for $i from 1 through 4 {
+           &:nth-child(#{$i}){
+             @include transition(all .6s cubic-bezier(0.165,.84,.44,1) ($i - 1)* 0.2s);
+           }
+         }
+       }
+    }
+    &:hover{
+      .logo-txt{
+        img{
+          left: 10px;
+        }
+      }
+    }
+  }
+  .menu{
+    margin-left: 30px;
+    &>div{
+      position: relative;
+      display: inline-block;
+      float: left;
+      width: 115px;
+      height: $height;
+      line-height: $height;
+      color: $text-1;
+      font-size: 1.6rem;
+      text-align: center;
+      z-index: 1;
+      &.bg-slide{
+        position: absolute;
+        top: 0;
+        left: -115px;
+        z-index: 0;
+        background-color: $bg-color-2;
+      }
+      a{
+        color: $text-1;
+      }
+      &>a{
+        display: block;
+        position: relative;
+      }
+      .sub-menu{
+        position: absolute;
+        background-color: $bg-color-2;
+        top: $height;
+        z-index: -1;
+        display: none;
+        @include transition(all ease 0.3s);
+        &.active{
+          display: block;
+        }
+        li{
+          a{
+            font-size: 1.4rem;
+            width: 115px;
+            height: 40px;
+            line-height: 40px;
+            color: $text-3;
+            display: block;
+            @include transition(all ease 0.3s);
+            &:hover{
+              color: $text-5;
+              background-color: $text-8;
+            }
+          }
+        }
+      }
+      .sub-menu-group{
+        position: absolute;
+        left: -180px;
+        top: $height;
+        text-align: left;
+        width: 811px;
+        background-color: $bg-color-2;
+        @include transition(all ease 0.3s);
+        display: none;
+        &.active{
+          display: block;
+        }
+        .sub-mg-title{
+          color: $text-3;
+          font-size: 1.6rem;
+          padding-left: 20px;
+          line-height: 50px;
+          margin-bottom: 10px;
+        }
+        .sub-menu-item{
+          width: 270px;
+          color: $text-3;
+          line-height: 1.5;
+          float: left;
+          display: inline-block;
+          li{
+            padding: 5px 10px 5px 20px;
+            a,.sub-mi-desc{
+              font-size: 1.4rem;
+              color: $text-3;
+              display: block;
+            }
+            .sub-mi-title{
+              font-size: 1.6rem;
+              color: $text-8;
+              margin-bottom: 5px;
+            }
+            @include transition(all ease 0.3s);
+            &:hover{
+              background-color: $text-8;
+              a,div{
+                color: $text-5;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .action{
+    height: $height;
+    line-height: $height;
+  }
+  .login{
+    color: $text-9;
+    font-size: 1.3rem;
+    border: 1px solid $text-9;
+    @include border-radius(2px);
+    padding: 5px;
+  }
+}
+
+//合作伙伴
+.sn-partners{
+  padding: 40px 0;
+  .sm-p-title{
+    padding: 10px 0;
+    color: $text-2;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  .sm-p-list{
+    padding: 10px 0;
+    li{
+      display: inline-block;
+      float: left;
+      &>a{
+        display: block;
+        img{
+            max-height: 40px;
+            height: 40px;
+            margin: 0 10px;
+            @include transition(all ease 0.3s);
+        }
+      }
+    }
+  }
+}
+
+
+//site map
+.sn-site-map{
+  padding: 60px 0;
+  text-align: left;
+  background-color: $bg-color-3;
+  .sn-sm-item{
+    display: inline-block;
+    float: left;;
+    li{
+      padding: 4px 18px;
+      &.title{
+        color: $text-3;
+        font-size: 1.4rem;
+        font-weight: bolder;
+      }
+      a{
+        position: relative;
+        left: 0;
+        color: $text-3;
+        font-size: 1.4rem;
+        display: block;
+        &>img{
+          width: 18px;
+          vertical-align: middle;
+          position: relative;
+          top: -1px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+
+//footer
+.sn-footer{
+  background-color: $text-1;
+  color: $text-5;
+  font-size: 1.2rem;
+  padding: 10px 0;
+  p{
+    height: 25px;
+    line-height: 25px;
+  }
+}
+
+//浮层menu
+.sn-fix-menu{
+  width: 64px;
+  height: 256px;
+  display: block;
+  position: fixed;
+  bottom: 100px;
+  right: 0;
+  z-index: 10;
+  .mask{
+    position: absolute;
+    width: 64px;
+    height: 256px;
+    @include opacity(0.5);
+    background-color: $text-5;
+    z-index: -1;
+  }
+  &>a{
+    margin: 8px 5px ;
+    width: 54px;
+    height: 54px;
+    display: block;
+    &.qq{
+      width: 54px;
+      height: 54px;
+      background: url("../images/float_layer/qq.jpg") no-repeat center;
+      &:hover{
+        background: url("../images/float_layer/bg.jpg") no-repeat 0 0;
+      }
+    }
+    &.mobile{
+      width: 54px;
+      height: 54px;
+      background: url("../images/float_layer/phone.jpg") no-repeat 0 0;
+      &:hover{
+        position: relative;
+        left: -246px;
+        width: 300px;
+        background: url("../images/float_layer/phone.jpg") no-repeat 0 0;
+      }
+
+    }
+    &.qr{
+      width: 54px;
+      height: 54px;
+      background: url("../images/float_layer/bg.jpg") no-repeat 0 -108px;
+      &>img{
+        position: relative;
+        left: -176px;
+        display: none;
+      }
+      &:hover{
+        &>img{
+          display: block;
+        }
+      }
+    }
+    &.up{
+      width: 54px;
+      height: 54px;
+      background: url("../images/float_layer/bg.jpg") no-repeat 0 -162px;
+    }
+  }
+
+}

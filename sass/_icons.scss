@@ -1,0 +1,13 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ */
+//@import "compass/utilities/sprites";
+//@import "../images/icons/*.png";
+
+@mixin createDefaultIcon($width,$height,$img){
+  width: $width;
+  height: $height;
+  background: url("#{$img}") no-repeat center;
+  background-size: $width $height;
+}
