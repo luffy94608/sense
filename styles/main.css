@@ -132,43 +132,78 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 48, ../sass/_global.scss */
-.color-orange {
-  color: #E55927;
+.fixed {
+  position: fixed !important;
 }
 
-/* line 52, ../sass/_global.scss */
+/* line 51, ../sass/_global.scss */
+.relative {
+  position: relative !important;
+}
+
+/* line 56, ../sass/_global.scss */
+.color-orange {
+  color: #E55927 !important;
+}
+
+/* line 59, ../sass/_global.scss */
+.color-blue {
+  color: #29ABE2 !important;
+}
+
+/* line 62, ../sass/_global.scss */
+.color-black-0 {
+  color: #040000 !important;
+}
+
+/* line 65, ../sass/_global.scss */
+.color-black-2 {
+  color: #231815 !important;
+}
+
+/* line 68, ../sass/_global.scss */
+.color-black-3 {
+  color: #595758 !important;
+}
+
+/* line 71, ../sass/_global.scss */
+.color-black-4 {
+  color: #B4B3B3 !important;
+}
+
+/* line 75, ../sass/_global.scss */
 .bg-white {
   background-color: #ffffff;
 }
 
-/* line 57, ../sass/_global.scss */
+/* line 80, ../sass/_global.scss */
 .border-top-grey {
   border-top: 1px solid #E6E6E5;
 }
 
-/* line 60, ../sass/_global.scss */
+/* line 83, ../sass/_global.scss */
 .border-right-grey {
   border-right: 1px solid #E6E6E5;
 }
 
-/* line 63, ../sass/_global.scss */
+/* line 86, ../sass/_global.scss */
 .border-bottom-grey {
   border-bottom: 1px solid #E6E6E5;
 }
 
-/* line 66, ../sass/_global.scss */
+/* line 89, ../sass/_global.scss */
 .border-left-grey {
   border-left: 1px solid #E6E6E5;
 }
 
-/* line 71, ../sass/_global.scss */
+/* line 94, ../sass/_global.scss */
 .margin-t-10 {
-  margin-top: 10px;
+  margin-top: 10px !important;
 }
 
-/* line 74, ../sass/_global.scss */
+/* line 97, ../sass/_global.scss */
 .margin-t-20 {
-  margin-top: 20px;
+  margin-top: 20px !important;
 }
 
 /* line 1, ../sass/_style.scss */
@@ -205,12 +240,12 @@ a:hover {
 
 /* line 29, ../sass/_style.scss */
 .sn-header {
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 75px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
-  z-index: 2;
+  z-index: 5;
 }
 /* line 36, ../sass/_style.scss */
 .sn-header .logo {
@@ -578,6 +613,49 @@ a:hover {
   background: url("../images/float_layer/bg.jpg") no-repeat 0 -162px;
 }
 
+/* line 323, ../sass/_style.scss */
+.sn-page-bar {
+  position: relative;
+  height: 110px;
+}
+/* line 326, ../sass/_style.scss */
+.sn-page-bar .cloud {
+  height: 210px;
+  width: 100%;
+  position: absolute;
+  top: -100px;
+  z-index: 1;
+  background: url("../images/cloud.png") repeat-x center;
+}
+/* line 334, ../sass/_style.scss */
+.sn-page-bar .sn-pb-content {
+  position: relative;
+  z-index: 3;
+}
+/* line 337, ../sass/_style.scss */
+.sn-page-bar .sn-pb-content span {
+  font-size: 1.4rem;
+  color: #B4B3B3;
+  margin-left: 6px;
+}
+/* line 341, ../sass/_style.scss */
+.sn-page-bar .sn-pb-content span.active {
+  color: #29ABE2;
+}
+/* line 344, ../sass/_style.scss */
+.sn-page-bar .sn-pb-content span > a {
+  font-size: 1.4rem;
+  color: #B4B3B3;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+/* line 348, ../sass/_style.scss */
+.sn-page-bar .sn-pb-content span > a:hover {
+  color: #29ABE2;
+}
+
 /* line 3, ../sass/_home.scss */
 .sn-swiper-item {
   background-color: #f3f8f6;
@@ -664,18 +742,27 @@ a:hover {
   font-weight: bold;
 }
 /* line 71, ../sass/_home.scss */
+.sn-phc-item .snphc-desc .snphc-title-2 {
+  margin-top: 10px;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* line 77, ../sass/_home.scss */
 .sn-phc-item .snphc-desc .snphc-abstract {
   font-size: 1.6rem;
 }
-/* line 74, ../sass/_home.scss */
+/* line 80, ../sass/_home.scss */
 .sn-phc-item .snphc-desc .snphc-link {
   margin-top: 15px;
 }
-/* line 76, ../sass/_home.scss */
+/* line 82, ../sass/_home.scss */
 .sn-phc-item .snphc-desc .snphc-link > a {
+  position: relative;
+  left: 0;
   font-size: 1.6rem;
 }
-/* line 82, ../sass/_home.scss */
+/* line 90, ../sass/_home.scss */
 .sn-phc-item .snphc-img img {
   width: 400px;
 }

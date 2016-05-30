@@ -68,12 +68,20 @@
       font-size: 2.4rem;
       font-weight: bold;
     }
+    .snphc-title-2{
+      margin-top: 10px;
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
     .snphc-abstract{
       font-size: 1.6rem;
     }
     .snphc-link{
       margin-top: 15px;
        &>a{
+         position: relative;
+         left: 0;
          font-size: 1.6rem;
        }
     }

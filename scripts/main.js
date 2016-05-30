@@ -24,11 +24,11 @@ $(document).ready(function () {
             });
         },
         /**
-         * 初始化网站地图 动画
+         * 初始化网站地图 右移动动画
          */
         initSiteMapAnimation:function () {
             var opts = {
-                target:$('.sn-sm-item .info'),
+                target:$('.sn-sm-item .info,.snphc-link>a,.animate_hover_move'),
                 left:'15px',
             };
             opts.target.mouseover(function () {
@@ -44,6 +44,11 @@ $(document).ready(function () {
          * 初始化企业营销qq
          */
         initQQ : function () {
+            // $(document).on('click','.open_qq',function () {
+            $('.open_qq').click(function () {
+                console.log(111);
+                $("#BizQQWPA").trigger("click");
+            });
             setTimeout(function(){
                 BizQQWPA.addCustom({aty: '0', a: '0', nameAccount: 4006506701, selector: 'BizQQWPA'});
             },3000);
@@ -135,6 +140,70 @@ $(document).ready(function () {
 
             });
         },
+        /**
+         * 网站跳转``
+         */
+        initLocationUrlEvent :function () {
+            var opts = {
+                target:'.js_location_url',
+                urlMap:{
+                    index:'index.html',
+                    //产品
+                    products:'',
+                    //云授权平台
+                    platform:'',
+                    about_platform:'',
+                    cloud_lock:'',
+                    ss_service:'',
+                    in_platform:'',
+                    //专业工具
+                    tools:'',
+                    vp_tools:'vp_tools.html',
+                    vp_doc_download:'files/Virbox Protector-Doc.zip',
+                    auth_tools:'',
+                    user_tools:'',
+                    //加密锁
+                    locks:'',
+                    picked_5:'',
+                    picked_4s:'',
+                    picked_1:'',
+                    try_and_buy:'',
+                    //解决方案
+                    solution:'',
+                    game_industry:'',
+                    manage_industry:'',
+                    architecture_industry:'',
+                    edu_and_doc:'',
+                    common_industry:'',
+                    //支持
+                    support:'',
+                    su_download:'',
+                    su_problem:'',
+                    su_feedback:'',
+                    su_contact:'',
+                    //我们
+                    we:'',
+                    we_desc:'',
+                    we_news:'',
+                    we_route:'',
+                    we_intellectual:'',
+                    we_property:'',
+                    we_recruit:'',
+                    //登录
+                    login:'http://developer.senseshield.com/auth/',
+                    register:'http://developer.senseshield.com/auth/register.jsp',
+                    area:'http://www.senselock.com/en/index.php',
+                }
+            };
+            // JavaScript Document
+            $(document).on('click',opts.target,function () {
+                var type = $(this).data('url');
+                var url = opts.urlMap[type];
+                if(url){
+                    window.location.href=url;
+                }
+            });
+        },
 
         run : function () {
             initPage.initMenuSlide();
@@ -142,6 +211,7 @@ $(document).ready(function () {
             initPage.initPartnersAnimation();
             initPage.initSiteMapAnimation();
             initPage.initScrollTop();
+            initPage.initLocationUrlEvent();
             initPage.initQQ();
         }
     };

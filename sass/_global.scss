@@ -44,9 +44,32 @@
   display: none;
 }
 
+//position
+.fixed{
+  position: fixed!important;
+}
+.relative{
+  position: relative!important;
+}
+
 //color
 .color-orange{
-  color: $text-6;
+  color: $text-6!important;
+}
+.color-blue{
+  color: $text-9!important;
+}
+.color-black-0{
+  color: $text-1!important;
+}
+.color-black-2{
+  color: $text-2!important;
+}
+.color-black-3{
+  color: $text-3!important;
+}
+.color-black-4{
+  color: $text-4!important;
 }
 
 .bg-white{
@@ -69,8 +92,8 @@
 
 //margin
 .margin-t-10{
-  margin-top: 10px;
+  margin-top: 10px!important;
 }
 .margin-t-20{
-  margin-top: 20px;
+  margin-top: 20px!important;
 }
