@@ -124,3 +124,83 @@
     }
   }
 }
+
+//成长历程
+.sn-we-route{
+  .sn-wr-title{
+    font-size: 4rem;
+    color: $text-9;
+    font-weight: bolder;
+    margin-bottom: 50px;
+    margin-left: 40px;
+  }
+  .sn-wr-list{
+    position: relative;
+    .icon-time{
+      position: absolute;
+      top: -35px;
+      left: 173px;
+      width: 32px;
+      height: 32px;
+      background: url("../images/time.png") no-repeat center;
+      @include background-size(32px 32px);
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      left: 187px;
+      display: inline-block;
+      width: 1px;
+      height: 100%;
+      border-right: 1px solid $border-color;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 186px;
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background-color: $border-color;
+      @include border-radius(50%);
+    }
+    .sn-wr-item{
+      position: relative;
+      margin: 10px 40px;
+      &:before{
+        content: attr(data-group);
+        color: $text-6;
+        font-size: 3rem;
+        display: block;
+      }
+      &:after{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 7px;
+        left: 105px;
+        width: 32px;
+        height: 32px;
+        background: url("../images/arrow_down.png") no-repeat center;
+        @include background-size(32px 32px);
+      }
+      &>li{
+        margin-left: 150px;
+        font-size: 1.6rem;
+        color: $text-3;
+        padding: 5px 0;
+        &:before{
+          content: '';
+          display: inline-block;
+          width: 25px;
+          height: 1px;
+          vertical-align: middle;
+          margin-left: 5px;
+          margin-right: 15px;
+          border-top: 1px solid $border-color;
+        }
+      }
+    }
+  }
+}

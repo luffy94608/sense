@@ -190,7 +190,7 @@ $(document).ready(function () {
                     we:'',
                     we_desc:'',
                     we_news:'',
-                    we_route:'',
+                    we_route:'we_route.html',
                     we_intellectual:'',
                     we_property:'',
                     we_recruit:'',
