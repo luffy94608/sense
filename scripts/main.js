@@ -44,12 +44,8 @@ $(document).ready(function () {
          * 初始化企业营销qq
          */
         initQQ : function () {
-            // $(document).on('click','.open_qq',function () {
-            $('.open_qq').click(function () {
-                console.log(111);
-                $("#BizQQWPA").trigger("click");
-            });
             setTimeout(function(){
+                BizQQWPA.addCustom({aty: '0', a: '0', nameAccount: 4006506701, selector: 'BizQQWPA2'});
                 BizQQWPA.addCustom({aty: '0', a: '0', nameAccount: 4006506701, selector: 'BizQQWPA'});
             },3000);
         },
@@ -227,5 +223,4 @@ $(document).ready(function () {
     };
 
     initPage.run();
-
 });
