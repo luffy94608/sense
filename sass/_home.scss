@@ -5,22 +5,42 @@
   .sn-si-title{
     position: absolute;
     top: 50%;
-    left: 6%;
+    width: 1024px;
+    left: 0;
+    right: 0;
+    text-align: left;
     font-size: 2rem;
-
-    width: 270px;
     color: $text-5;
+    margin: 0 auto;
     @include transform(translateY(-50%));
-    &>p:first-child{
-      font-size: 3rem;
-      font-weight: bolder;
-      margin-bottom: 10px;
+    &>p{
+      width: 270px;
+      &:first-child{
+        font-size: 3rem;
+        font-weight: bolder;
+        margin-bottom: 10px;
+      }
     }
   }
   &>img{
     width: 100%;
   }
 }
+.swiper-button-prev.sn-pre-btn,
+.swiper-button-next.sn-next-btn
+{
+  width: 70px;
+  height: 70px;
+  @include background-size(70px 70px);
+  &.sn-pre-btn{
+    background: url("../images/pre_btn.png") no-repeat center;
+  }
+  &.sn-next-btn{
+    background: url("../images/next_btn.png") no-repeat center;
+  }
+}
+
+
 
 //首页列表内容
 .sn-phc-menu{
@@ -49,42 +69,54 @@
 }
 
 .sn-phc-item{
+  position: relative;
   padding: 30px 0;
   .snphc-desc{
     width: 500px;
-    .snphc-tag{
-      width: 192px;
-      height: 107px;
-      line-height: 140px;
-      color: $text-5;
-      font-size: 2.9rem;
-      font-weight: bolder;
-      text-indent: 1.2em;
-      display: inline-block;
-      background: url("../images/home/cloud_blue.png") no-repeat center;
+    .sn-phcd-center{
+      position: absolute;
+      top: 50%;
+      width: 500px;
+      @include transform(translateY(-50%));
+      .snphc-tag{
+        width: 192px;
+        height: 107px;
+        line-height: 140px;
+        color: $text-5;
+        font-size: 2.9rem;
+        font-weight: bolder;
+        text-indent: 1.2em;
+        display: inline-block;
+        background: url("../images/home/cloud_blue.png") no-repeat center;
+      }
+      .snphc-title{
+        margin-top: 10px;
+        font-size: 2.4rem;
+        font-weight: bold;
+      }
+      .snphc-title-2{
+        margin-top: 10px;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .snphc-abstract{
+        font-size: 1.6rem;
+        line-height: 2;
+      }
+      .snphc-content{
+        font-size: 1.6rem;
+      }
+      .snphc-link{
+        margin-top: 15px;
+        &>a{
+          position: relative;
+          left: 0;
+          font-size: 1.6rem;
+        }
+      }
     }
-    .snphc-title{
-      margin-top: 10px;
-      font-size: 2.4rem;
-      font-weight: bold;
-    }
-    .snphc-title-2{
-      margin-top: 10px;
-      font-size: 3rem;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .snphc-abstract{
-      font-size: 1.6rem;
-    }
-    .snphc-link{
-      margin-top: 15px;
-       &>a{
-         position: relative;
-         left: 0;
-         font-size: 1.6rem;
-       }
-    }
+
   }
   .snphc-img{
     img{

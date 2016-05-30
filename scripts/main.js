@@ -114,7 +114,10 @@ $(document).ready(function () {
                 spaceBetween: 30,
                 fade: {
                     crossFade: true,
-                }
+                },
+                prevButton:'.swiper-button-prev',
+                nextButton:'.swiper-button-next',
+
             });
         },
         /**
@@ -141,6 +144,12 @@ $(document).ready(function () {
             });
         },
         /**
+         * 修正 sn-phc-item 高度
+         */
+        initFixedSnPhcItemHeight :function () {
+            $('.sn-phc-item .snphc-desc').height($('.sn-phc-item .sn-phcd-center').height());
+        },
+        /**
          * 网站跳转``
          */
         initLocationUrlEvent :function () {
@@ -151,11 +160,11 @@ $(document).ready(function () {
                     //产品
                     products:'',
                     //云授权平台
-                    platform:'',
-                    about_platform:'',
+                    platform:'platform.html',
+                    about_platform:'platform_intro.html',
                     cloud_lock:'',
                     ss_service:'',
-                    in_platform:'',
+                    in_platform:'http://developer.senseshield.com/auth/',
                     //专业工具
                     tools:'',
                     vp_tools:'vp_tools.html',
@@ -212,10 +221,10 @@ $(document).ready(function () {
             initPage.initSiteMapAnimation();
             initPage.initScrollTop();
             initPage.initLocationUrlEvent();
+            initPage.initFixedSnPhcItemHeight();
             initPage.initQQ();
         }
     };
-
 
     initPage.run();
 
