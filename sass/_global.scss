@@ -101,6 +101,12 @@
 .margin-t-20{
   margin-top: 20px!important;
 }
+.margin-l-10{
+  margin-left: 10px!important;
+}
+.margin-l-20{
+  margin-left: 20px!important;
+}
 
 //居中
 @mixin center($width: null, $height: null) {

@@ -21,6 +21,15 @@
         margin-bottom: 10px;
       }
     }
+    .reg-btn{
+      display: inline-block;
+      font-size: 2rem;
+      @include border-radius(2px);
+      padding: 5px 30px;
+      margin-top: 20px;
+      color: $text-5;
+      border: 1px solid $text-5;
+    }
   }
   &>img{
     width: 100%;
@@ -201,6 +210,51 @@
           border-top: 1px solid $border-color;
         }
       }
+    }
+  }
+}
+
+//云锁页面 SS安全服务
+.sn-cl-section{
+  .sn-cls-item{
+    margin: 20px 0;
+    .sn-cls-title{
+      color: $text-2;
+      font-weight: bolder;
+      font-size: 2.4rem;
+    }
+    .sn-cls-sub-title{
+      color: $text-2;
+      font-weight: bolder;
+      font-size: 1.8rem;
+    }
+    .sn-cls-desc{
+      color: $text-3;
+      line-height: 2;;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+//用户工具 授权管理工具
+.sn-pt-section{
+  .sn-pt-item{
+    margin: 20px 0;
+    .sn-pti-title{
+      color: $text-2;
+      font-weight: bolder;
+      font-size: 2.4rem;
+    }
+    .sn-pti-sub-title{
+      color: $text-2;
+      font-weight: bolder;
+      font-size: 1.8rem;
+    }
+    .sn-pti-desc{
+      margin-top: 20px;
+      color: $text-3;
+      line-height: 2;;
+      font-size: 1.6rem;
     }
   }
 }

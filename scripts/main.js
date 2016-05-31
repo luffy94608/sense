@@ -82,7 +82,7 @@ $(document).ready(function () {
             opts.target.mouseover(function () {
                 var $this = $(this);
                 var src = $this.attr('src');
-                if(src.indexOf(opts.srcStr)!==-1){
+                if(src.indexOf(opts.srcStr)!==-1 && src.indexOf(opts.replaceStr) ===-1){
                     var newSrc = src.replace(opts.srcStr,opts.replaceStr);
                     $this.attr('src',newSrc);
                 }
@@ -156,20 +156,20 @@ $(document).ready(function () {
                     //产品
                     products:'',
                     //云授权平台
-                    platform:'platform.html',
+                    platform:'',
                     about_platform:'platform_intro.html',
-                    cloud_lock:'',
-                    ss_service:'',
+                    cloud_lock:'cloud_lock.html',
+                    ss_service:'ss_service.html',
                     in_platform:'http://developer.senseshield.com/auth/',
                     //专业工具
                     tools:'',
                     vp_tools:'vp_tools.html',
                     vp_doc_download:'files/Virbox Protector-Doc.zip',
-                    auth_tools:'',
-                    user_tools:'',
+                    auth_tools:'auth_tools.html',
+                    user_tools:'user_tools.html',
                     //加密锁
                     locks:'',
-                    picked_5:'',
+                    picked_5:'lock_detail.html',
                     picked_4s:'',
                     picked_1:'',
                     try_and_buy:'',
@@ -219,8 +219,11 @@ $(document).ready(function () {
             initPage.initLocationUrlEvent();
             initPage.initFixedSnPhcItemHeight();
             initPage.initQQ();
+
         }
     };
 
-    initPage.run();
+    setTimeout(function () {
+        initPage.run();
+    },1000);
 });
