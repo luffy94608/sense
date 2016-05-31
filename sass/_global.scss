@@ -19,6 +19,20 @@
   float: right!important;
 }
 
+//font size
+.font-size-14{
+  font-size: 1.4rem!important;
+}
+.font-size-16{
+  font-size: 1.6rem!important;
+}
+.font-size-18{
+  font-size: 1.8rem!important;
+}
+.font-size-20{
+  font-size: 2rem!important;
+}
+
 //text
 .line-height-30{
   line-height: 3rem;
@@ -93,7 +107,9 @@
 .border-left-grey{
   border-left: 1px solid $border-color;
 }
-
+.border-bottom-blue{
+  border-bottom: 1px solid $text-9;
+}
 //margin
 .margin-t-10{
   margin-top: 10px!important;

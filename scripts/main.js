@@ -41,6 +41,26 @@ $(document).ready(function () {
             });
         },
         /**
+         * 初始化tab切换
+         */
+        initTabChangeEvent:function () {
+            var opts = {
+                target:$('.sn-nav-tabs>li'),
+                targetCon:$('.sn-tab-content>div'),
+            };
+            opts.target.find('a').click(function () {
+                var $this = $(this);
+                var id=$this.data('id');
+                if(id){
+                    opts.target.removeClass('active');
+                    $this.parents('li').addClass('active');
+                    opts.targetCon.removeClass('active');
+                    $(id).addClass('active');
+                }
+            });
+
+        },
+        /**
          * 初始化企业营销qq
          */
         initQQ : function () {
@@ -219,7 +239,7 @@ $(document).ready(function () {
             initPage.initLocationUrlEvent();
             initPage.initFixedSnPhcItemHeight();
             initPage.initQQ();
-
+            initPage.initTabChangeEvent();
         }
     };
 

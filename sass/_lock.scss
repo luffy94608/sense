@@ -1,0 +1,172 @@
+//lock detail
+.sn-lock-detail{
+  .sn-nav-tabs{
+    @extend .clear-fix;
+    display: block;
+    &>li,&>li>a{
+      display: inline-block;
+      float: left;
+      font-size: 1.8rem;
+      color: $text-9;
+      padding: 5px 10px;
+      @include transition(all ease .2s);
+    }
+    &>li{
+      &:hover,&.active{
+        &,&>a{
+           color: $text-5;
+           background-color: $text-9;
+         }
+      }
+    }
+  }
+  .sn-tab-content{
+    .sn-tab-pane{
+      padding-top: 40px;
+      display: none;
+      &.active{
+        display: block;
+      }
+    }
+  }
+  .sn-ld-section-title{
+    color: $text-2;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  .sn-ld-title{
+    color: $text-2;
+    font-size: 2rem;
+    padding: 20px 0;
+  }
+  .sn-ld-desc{
+    color: $text-3;
+    font-size: 1.8rem;
+  }
+  .sn-ld-feature{
+    color: $text-3;
+    font-size: 1.4rem;
+    line-height: 2.4;
+  }
+  .sn-ld-btn-list{
+    margin-top: 30px;
+    &>.sn-ld-btn{
+      margin-right: 20px;
+    }
+    &.center{
+      margin: 0 auto;
+    }
+  }
+  .sn-ld-btn{
+    display: inline-block;
+    font-size: 2rem;
+    color: $text-5;
+    -webkit-appearance: none;
+    border: none;
+    width: 250px;
+    height: 45px;
+    line-height: 45px;
+    background-color: $text-9;
+    cursor: pointer;
+    &:hover{
+      background-color: $text-8;
+    }
+    &.download:before{
+       content: '';
+       display: inline-block;
+       width: 44px;
+       height: 38px;
+       margin-right: 10px;
+       vertical-align: middle;
+       background: url("../images/download_w.png") no-repeat center;
+       @include background-size(80%);
+    }
+  }
+
+  .sn-ld-pic{
+    width: 400px;
+    .dn-ldp-preview{
+      width: 100%;
+    }
+    .dn-ldp-list{
+      &>img{
+        width: 32%;
+      }
+    }
+    border-right: 1px solid $border-color;
+  }
+  .sn-ld-detail{
+    width: 600px;
+    .sn-ld-version{
+      width: 100%;
+      &,td{
+        border: 1px solid $border-color;
+      }
+      td,th{
+        height: 35px;
+        line-height: 35px;
+        color: $text-3;
+        font-size: 1.4rem;
+        text-align: center;
+      }
+      tr{
+        &:first-child{
+          background-color: $bg-color-2;
+        }
+      }
+    }
+  }
+  .sn-ld-params{
+    width: 100%;
+    margin: 10px 0 20px;
+    tr:nth-of-type(odd){
+      background-color: $bg-color-5;
+    }
+    td{
+      color: $text-3;
+      font-size: 1.4rem;
+      height: 35px;
+      line-height: 35px;
+    }
+  }
+  .sn-input-inline{
+    display: inline-block;
+    margin-right: 40px;
+  }
+  .sn-input-group{
+    display: table;
+    border: 1px solid $border-color;
+    width: 450px;
+    padding: 10px 0 10px 10px;
+    margin: 10px 0;
+    overflow: hidden;
+    @include box-sizing(border-box);
+    label,input{
+      display: table-cell;
+      color: $text-3;
+      font-size: 1.4rem;
+      outline: none;
+      border: none;
+    }
+    &>label{
+      width: 50px;
+      &.width-80{
+        width: 80px;
+      }
+    }
+    &>input{
+      width: 100%;
+    }
+  }
+  .sn-ld-textarea{
+    width: 100%;
+    resize: none;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 1.4rem;
+    color: $text-3;
+    line-height: 1.6;
+    outline: none;
+    border: 1px solid $border-color;
+  }
+}
