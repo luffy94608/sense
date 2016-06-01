@@ -41,9 +41,11 @@
   }
   .sn-ld-desc{
     color: $text-3;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    line-height: 2;
   }
   .sn-ld-feature{
+    margin: 20px 0;
     color: $text-3;
     font-size: 1.4rem;
     line-height: 2.4;
@@ -52,6 +54,7 @@
     margin-top: 30px;
     &>.sn-ld-btn{
       margin-right: 20px;
+      outline: none;
     }
     &.center{
       margin: 0 auto;
@@ -115,6 +118,36 @@
         }
       }
     }
+    .sn-ld-version-c{
+      width: 100%;
+      margin: 20px  0  10px;
+      &,td{
+        border: 1px solid $border-color;
+      }
+      td{
+        width: 50%;
+        color: $text-3;
+        font-size: 1.4rem;
+        text-align: center;
+        padding: 10px;
+      }
+      tr{
+        &:first-child>td{
+          padding: 0;
+        }
+      }
+    }
+    .sn-ld-vc-title{
+      width: 100%;
+      &>div{
+        width: 50%;
+        color: $text-3;
+        display: inline-block;
+        font-size: 1.4rem;
+        text-align: center;
+        float: left;
+      }
+    }
   }
   .sn-ld-params{
     width: 100%;
@@ -127,6 +160,23 @@
       font-size: 1.4rem;
       height: 35px;
       line-height: 35px;
+    }
+  }
+  .sn-ld-table-params{
+    width: 100%;
+    margin: 10px 0 20px;
+    th,td{
+      color: $text-3;
+      font-size: 1.4rem;
+      height: 35px;
+      line-height: 35px;
+      text-align: left;
+      text-indent: 2em;
+      border: 1px solid $border-color;
+      &.center{
+        text-align: center;
+        text-indent: 0;
+      }
     }
   }
   .sn-input-inline{

@@ -184,14 +184,30 @@ $(document).ready(function () {
                     //专业工具
                     tools:'',
                     vp_tools:'vp_tools.html',
-                    vp_doc_download:'files/Virbox Protector-Doc.zip',
+                    vp_doc_download:'http://115.29.189.225/Files/Virbox%20Protector-Doc.zip',
                     auth_tools:'auth_tools.html',
                     user_tools:'user_tools.html',
                     //加密锁
                     locks:'',
-                    picked_5:'lock_detail.html',
-                    picked_4s:'',
-                    picked_1:'',
+                    picked_5:'lock_jr5_std.html',//标准版
+                    picked_5_download:'http://115.29.189.225/Files/V5-Setup.zip',//标准版
+                    picked_5_bt:'lock_jr5_bt.html',//蓝牙版
+                    picked_5_bt_download:'http://115.29.189.225/Files/V5-SDK.zip',//蓝牙版
+                    picked_5_usb:'lock_jr5_usb.html',//U盘版
+                    picked_5_usb_download:'http://115.29.189.225/Files/V5-Setup.zip',//U盘版
+                    picked_4s:'lock_jr4s_std.html',
+                    picked_4s_spt:'lock_jr4s_spt.html',
+                    picked_4s_net:'lock_jr4s_net.html',
+                    picked_4s_clock:'lock_jr4s_clock.html',
+                    picked_4s_sdk_download:'http://115.29.189.225/Files/V4-v3.4-Res.zip',
+                    picked_4s_doc_download:'http://115.29.189.225/Files/V4-v3.4-Doc.zip',
+                    picked_4s_net_sdk_download:'http://115.29.189.225/Files/V4Net-v3.4-Res.zip',
+                    picked_4s_net_doc_download:'http://115.29.189.225/Files/V4Net-v3.4-Doc.zip',
+                    picked_4s_clock_doc_download:'http://115.29.189.225/Files/V4-v3.4-Doc.zip',
+                    picked_4s_clock_sdk_download:'http://115.29.189.225/Files/V4-v3.4-Res.zip',
+                    picked_1:'lock_lr1_std.html',
+                    picked_1_clock_sdk_download:'http://115.29.189.225/Files/V1-v1.4-Res.zip',
+                    picked_1_clock_doc_download:'http://115.29.189.225/Files/V1-v1.4-Doc.zip',
                     try_and_buy:'',
                     //解决方案
                     solution:'',
