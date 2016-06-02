@@ -393,3 +393,13 @@ a{
   color: $text-9;
   font-weight: bolder;
 }
+.sn-sub-title{
+  font-size: 1.4rem;
+  color: $text-3;
+  line-height: 2;
+}
+//渐变背景
+.sn-blue-bg{
+  height: 400px;
+  @include background(linear-gradient('top',$text-9,$text-5));
+}

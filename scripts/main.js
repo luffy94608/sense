@@ -58,6 +58,22 @@ $(document).ready(function () {
                     $(id).addClass('active');
                 }
             });
+        },
+        /**
+         * 初始化诚聘精英 列表伸缩效果
+         */
+        initRecruitLiEvent:function () {
+            var opts = {
+                target:$('.sn-wr-list>li'),
+                targetCon:'.sn-wrl-desc',
+            };
+            opts.target.click(function () {
+                var $this = $(this);
+                opts.target.removeClass('active');
+                $this.siblings().find(opts.targetCon).slideUp();
+                $(opts.targetCon,$this).slideDown();
+                $this.addClass('active');
+            });
 
         },
         /**
@@ -220,16 +236,16 @@ $(document).ready(function () {
                     support:'',
                     su_download:'',
                     su_problem:'',
-                    su_feedback:'',
-                    su_contact:'',
+                    su_feedback:'feedback.html',
+                    su_contact:'contact.html',
                     //我们
                     we:'',
                     we_desc:'',
                     we_news:'',
                     we_route:'we_route.html',
-                    we_intellectual:'',
-                    we_property:'',
-                    we_recruit:'',
+                    we_intellectual:'we_intellectual.html',
+                    we_property:'we_property.html',
+                    we_recruit:'we_recurit.html',
                     //登录
                     login:'http://developer.senseshield.com/auth/',
                     register:'http://developer.senseshield.com/auth/register.jsp',
@@ -256,6 +272,7 @@ $(document).ready(function () {
             initPage.initFixedSnPhcItemHeight();
             initPage.initQQ();
             initPage.initTabChangeEvent();
+            initPage.initRecruitLiEvent();
         }
     };
 

@@ -1,0 +1,133 @@
+@charset "UTF-8";
+// we style
+//公司资质 或知识产权
+.sn-we-ipr{
+  .swi-list{
+    margin: 20px 0 40px;
+    &>li{
+      display: inline-block;
+      float: left;
+      width: 235px;
+      margin: 10px;
+      .swi-pic{
+        padding: 10px;
+        @include box-sizing(border-box);
+        border: 1px solid $border-color;
+        img{
+          width: 100%;
+        }
+        &:hover{
+          border: 1px solid $text-9;
+        }
+      }
+      .swi-desc{
+        font-size: 1.4rem;
+        color: $text-3;
+        margin: 20px 0;
+      }
+    }
+    &.property-list{
+      &>li{
+        width: 320px;
+        .swi-pic{
+          height: 239px;
+          overflow: hidden;
+          &:hover{
+            border: 1px solid $border-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+//诚聘精英
+.sn-we-rct{
+  .sn-wr-list{
+    li{
+      padding-left: 30px;
+      @include transition(all ease .3s);
+      border-bottom: $border-style;
+      &:first-child{
+        border-top: $border-style;
+      }
+      .icon-circle{
+        font-size: 1.2rem;
+        position: absolute;
+        left: -20px;
+        top: 26px;
+        color: $text-9;
+      }
+      .sn-wrl-head{
+        padding: 20px 0;
+        position: relative;
+        .arrow{
+          color: $text-4;
+          font-size: 2rem;
+          position: absolute;
+          right: 10px;
+          @include transition(all ease .3s);
+          @include transform(rotate(180deg));
+        }
+        &>span{
+          display: inline-block;
+        }
+        .sn-wlh-title{
+          font-size: 1.8rem;
+          color: $text-3;
+          &.circle{
+            content: '';
+          }
+        }
+        .sn-wlh-time{
+          font-size: 1.6rem;
+          color: $text-4;
+          float: right;
+          margin-right: 40px;
+        }
+      }
+      .sn-wrl-desc{
+        display: none;
+        .sn-wr-ld-item{
+          position: relative;
+          display: inline-block;
+          width: 33%;
+          margin: 3px 0;
+          &.block{
+            width: 100%;
+            margin-bottom: 20px;
+            display: block;
+            &>span:first-child{
+              position: absolute;
+              top: 0 ;
+            }
+          }
+          &>span{
+            color: $text-3;
+            font-size: 1.4rem;
+            &:first-child{
+              font-weight: bolder;
+            }
+          }
+          .sn-wrli-content{
+            margin-left: 75px;
+            color: $text-3;
+            font-size: 1.4rem;
+            white-space: pre-line;
+            line-height: 2rem;
+          }
+        }
+      }
+      &.active{
+        background-color: $border-color;
+        .arrow{
+          color: $text-9;
+          @include transform(rotate(0deg));
+        }
+        .sn-wrl-desc{
+          //display: block;
+        }
+      }
+    }
+  }
+}
