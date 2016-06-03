@@ -32,6 +32,12 @@
 .font-size-20{
   font-size: 2rem!important;
 }
+.font-size-24{
+  font-size: 2.4rem!important;
+}
+.font-size-30{
+  font-size: 3rem!important;
+}
 //width
 .width-p-50{
   width: 50%!important;
@@ -39,8 +45,14 @@
 .width-p-100{
   width: 100%!important;
 }
+.min-height-400{
+  min-height: 400px;
+}
 
 //text
+.bolder{
+  font-weight: bolder;
+}
 .line-height-30{
   line-height: 3rem;
 }

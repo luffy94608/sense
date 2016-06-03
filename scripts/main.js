@@ -69,6 +69,9 @@ $(document).ready(function () {
             };
             opts.target.click(function () {
                 var $this = $(this);
+                if($(opts.targetCon,$this).html()==0){
+                    return false;
+                }
                 opts.target.removeClass('active');
                 $this.siblings().find(opts.targetCon).slideUp();
                 $(opts.targetCon,$this).slideDown();
@@ -235,13 +238,14 @@ $(document).ready(function () {
                     //支持
                     support:'',
                     su_download:'',
-                    su_problem:'',
+                    su_problem:'problem.html',
                     su_feedback:'feedback.html',
                     su_contact:'contact.html',
                     //我们
                     we:'',
-                    we_desc:'',
-                    we_news:'',
+                    we_desc:'company_intro.html',
+                    we_news:'news.html',
+                    news_detail:'news_detail.html',
                     we_route:'we_route.html',
                     we_intellectual:'we_intellectual.html',
                     we_property:'we_property.html',

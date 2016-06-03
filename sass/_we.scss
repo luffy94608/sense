@@ -58,6 +58,13 @@
         top: 26px;
         color: $text-9;
       }
+      .sn-wlh-sort{
+        font-size: 1.6rem;
+        position: absolute;
+        left: -25px;
+        top: 23px;
+        color: $text-9;
+      }
       .sn-wrl-head{
         padding: 20px 0;
         position: relative;
@@ -88,6 +95,12 @@
       }
       .sn-wrl-desc{
         display: none;
+        .sn-wr-ld-txt{
+          color: $text-3;
+          font-size: 1.4rem;
+          line-height: 2rem;
+          padding: 0 20px 20px 0;
+        }
         .sn-wr-ld-item{
           position: relative;
           display: inline-block;
@@ -128,6 +141,26 @@
           //display: block;
         }
       }
+      &:hover{
+        background-color: $border-color;
+      }
     }
+  }
+}
+
+//公司新闻
+.sn-we-news{
+  padding-bottom: 50px;
+  .sn-wen-title{
+    color: $text-3;
+    font-size: 2.4rem;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .sn-wen-content{
+    color: $text-3;
+    font-size: 1.6rem;
+    line-height: 2;
+    white-space: pre-line;
   }
 }
