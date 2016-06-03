@@ -220,3 +220,90 @@
     border: 1px solid $border-color;
   }
 }
+
+//试用及购买
+.sn-try-buy{
+  margin: 0 40px 40px;
+  padding: 40px;
+  @include box-shadow(0 0 12px 4px $border-color);
+  input[type=text] {
+    outline: none;
+    color: $text-3;
+    font-size: 1.4rem;
+    border: $border-style;
+  }
+  color: $text-3;
+  font-size: 2rem;
+  .sn-tb-form{
+    &>div{
+      float: left;
+    }
+  }
+  .require{
+    width: 10px;
+    color: $text-10;
+    position: relative;
+    top: 4px;
+    display: inline-block;
+  }
+  .sn-tb-item{
+    width: 400px;
+    height: 50px;
+    &.full{
+      width: 800px;
+    }
+    line-height: 50px;
+    &>label{
+    }
+    input{
+      width: 250px;
+      padding: 7px 10px;
+    }
+  }
+  .sn-tb-type{
+    height: 30px;
+    outline: none;
+    width: 150px;
+    border: 1px solid $border-color;
+  }
+  .sn-tb-block-item{
+    margin: 20px 0;
+    .sn-tbb-radio{
+      float: left;
+      width: 180px;
+      height: 40px;
+      line-height: 40px;
+      margin-right: 20px;
+      &>label{
+        vertical-align: middle;
+      }
+    }
+    &>textarea{
+      resize: none;
+      width: 90%;
+      outline: none;
+      height: 150px;
+      font-size: 1.4rem;
+      margin-top: 10px;
+      padding: 10px;
+      line-height: 2;
+      border: $border-style;
+    }
+  }
+  .hint{
+    font-size: 1.4rem;
+  }
+  .sn-tb-submit{
+    width: 150px;
+    outline: none;
+    height: 35px;
+    line-height: 35px;
+    color: $text-5;
+    border: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    background-color: $text-9;
+    @include box-shadow(4px 4px 2px -1px $border-color);
+  }
+}
+

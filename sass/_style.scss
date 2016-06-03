@@ -95,7 +95,7 @@ a{
       .sub-menu{
         position: absolute;
         background-color: $text-5;
-        top: $height + 1;
+        top: $height;
         z-index: -1;
         display: none;
         @include border-radius(1px);
@@ -140,7 +140,7 @@ a{
         padding-top: 10px;
         position: absolute;
         left: 0px;
-        top: $height + 1;
+        top: $height;
         text-align: left;
         width: 543px;
         background-color: $text-5;

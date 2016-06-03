@@ -227,7 +227,7 @@ $(document).ready(function () {
                     picked_1:'lock_lr1_std.html',
                     picked_1_clock_sdk_download:'http://115.29.189.225/Files/V1-v1.4-Res.zip',
                     picked_1_clock_doc_download:'http://115.29.189.225/Files/V1-v1.4-Doc.zip',
-                    try_and_buy:'',
+                    try_and_buy:'try_and_buy.html',
                     //解决方案
                     solution:'',
                     game_industry:'',
@@ -237,7 +237,7 @@ $(document).ready(function () {
                     common_industry:'',
                     //支持
                     support:'',
-                    su_download:'',
+                    su_download:'download.html',
                     su_problem:'problem.html',
                     su_feedback:'feedback.html',
                     su_contact:'contact.html',

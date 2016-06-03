@@ -17,7 +17,7 @@
     <section class="sn-page-bar">
         <div class="cloud"></div>
         <div class="wrap text-left sn-pb-content">
-            <span>您现在所在的位置：</span>
+            <span>您现在的位置：</span>
             <span>产品</span>   <span>></span>
             <span>硬件加密锁</span>   <span>></span>
             <span  class="active" >试用及购买</span>
@@ -25,50 +25,131 @@
     </section>
 
     <!--container list-->
-    <section class="sn-lock-detail">
+    <section class="">
         <div class="wrap text-left">
-            <div class="sn-tab-content clear-fix">
-                <div id="tab_3" class="sn-tab-pane active">
-                    <p class="sn-ld-section-title">基本信息</p>
-                    <div class="sn-input-inline margin-t-20">
-                        <div class="sn-input-group">
-                            <label>姓名：</label>
-                            <input type="text" placeholder="请填写您的真实姓名">
-                        </div>
+            <form method="post" action="sq.asp">
+            <div class="sn-try-buy">
+                <div class="sn-tb-form clear-fix">
+                    <div class="sn-tb-item">
+                        <label for="Name">姓名：<span class="require">*</span></label>
+                        <input type="text" id="Name" name="Name" required />
                     </div>
-                    <div class="sn-input-inline">
-                        <div class="sn-input-group">
-                            <label>邮箱：</label>
-                            <input type="text" placeholder="请填写您的真实邮箱">
-                        </div>
+                    <div class="sn-tb-item">
+                        <label for="Address" >通讯地址：<span class="require">*</span></label>
+                        <input type="text" id="Address" name="Address" required />
                     </div>
-                    <div class="sn-input-inline">
-                        <div class="sn-input-group">
-                            <label>电话：</label>
-                            <input type="text" placeholder="请填写您的有效电话">
-                        </div>
+                    <div class="sn-tb-item">
+                        <label for="Tel" >电话：<span class="require">*</span></label>
+                        <input type="text" id="Tel" name="Tel" required>
                     </div>
-                    <div class="sn-input-inline">
-                        <div class="sn-input-group">
-                            <label class="width-80">公司名称：</label>
-                            <input type="text" placeholder="请填写您的公司名称">
-                        </div>
+                    <div class="sn-tb-item">
+                        <label for="Mail" >电子邮件：<span class="require">*</span></label>
+                        <input type="text" id="Mail" name="Mail" required>
                     </div>
-
-                    <p class="sn-ld-section-title margin-t-20">申请使用的产品</p>
-                    <p class="margin-t-20">精锐5-试用版</p>
-                    <p class="sn-ld-section-title margin-t-20">软件的类别</p>
-                    <div class="sn-input-group margin-t-20">
-                        <input type="text" placeholder="请填写您的软件类别，例如：游戏软件">
+                    <div class="sn-tb-item">
+                        <label for="Fax" >传真：<span class="require"></span></label>
+                        <input type="text" id="Fax" name="Fax" >
                     </div>
-                    <p class="sn-ld-section-title">您对加密锁的要求</p>
-                    <textarea class="sn-ld-textarea" rows="10" placeholder="请填写你对加密锁的要求，请如实填写。"></textarea>
-                    <div class="sn-ld-btn-list text-center">
-                        <button class="sn-ld-btn center">申请试用</button>
+                    <div class="sn-tb-item">
+                        <label for="Company" >公司名称：<span class="require">*</span></label>
+                        <input type="text" id="Company" name="Company" required>
                     </div>
                 </div>
+                <div class="sn-tb-block-item clear-fix">
+                    <p>申请试用的产品：</p>
+                    <div class="sn-tbb-radio">
+                        <input id='radio_p_1' type='radio' name='selPro' value='精锐5试用' />
+                        <label for="radio_p_1">精锐5-试用版</label>
+                    </div>
+                    <div class="sn-tbb-radio">
+                        <input id='radio_p_2' type='radio' name='selPro' value='精锐5蓝牙' />
+                        <label for="radio_p_2">精锐5-蓝牙版</label>
+                    </div>
+                    <div class="sn-tbb-radio">
+                        <input id='radio_p_3' type='radio' name='selPro' value='精锐4S标准' />
+                        <label for="radio_p_3">精锐4S-标准版</label>
+                    </div>
+                    <div class="sn-tbb-radio">
+                        <input id='radio_p_4' type='radio' name='selPro' value='精锐4S精灵' />
+                        <label for="radio_p_4">精锐4S-精灵版</label>
+                    </div>
+                    <div class="sn-tbb-radio">
+                        <input id='radio_p_5' type='radio' name='selPro' value='精锐4S时钟' />
+                        <label for="radio_p_5">精锐4S-时钟版</label>
+                    </div>
+                    <div class="sn-tbb-radio">
+                        <input id='radio_p_6' type='radio' name='selPro' value='精锐4S网络' />
+                        <label for="radio_p_6">精锐4S-网络版</label>
+                    </div>
+                    <div class="sn-tbb-radio">
+                        <input id='radio_p_7' type='radio' name='selPro' value='精锐4S优盘' />
+                        <label for="radio_p_7">精锐4S-U盘版</label>
+                    </div>
+                    <div class="sn-tbb-radio">
+                        <input id='radio_p_8' type='radio' name='selPro' value='灵锐1' />
+                        <label for="radio_p_8">灵锐1-标准版</label>
+                    </div>
 
+                </div>
+                <div class="sn-tb-item full">
+                    <span>预计年用量：</span>
+                    <input type="text" name="Num" required>
+                </div>
+                <div class="sn-tb-block-item clear-fix">
+                    <p>请问您是从哪里获知深思加密产品信息的：</p>
+                    <div class="sn-tbb-radio">
+                        <input id='radio_1' type='radio' name='selFrom' value='他人推荐' />
+                        <label for="radio_1">他人推荐</label>
+                    </div>
+                    <div class="sn-tbb-radio">
+                        <input id='radio_2' type='radio' name='selFrom' value='百度' />
+                        <label for="radio_2">百度搜索</label>
+                    </div>
+                    <div class="sn-tbb-radio">
+                        <input id='radio_3' type='radio' name='selFrom' value='google' />
+                        <label for="radio_3">google搜索</label>
+                    </div>
+                    <div class="sn-tbb-radio">
+                        <input id='radio_4' type='radio' name='selFrom' value='其他网站' />
+                        <label for="radio_4">其他网站</label>
+                    </div>
+                    <div class="sn-tbb-radio">
+                        <input id='radio_5' type='radio' name='selFrom' value='邮件' />
+                        <label for="radio_5">邮件信息</label>
+                    </div>
+                    <div class="sn-tbb-radio">
+                        <input id='radio_6' type='radio' name='selFrom' value='其他' />
+                        <label for="radio_6">其他</label>
+                    </div>
+                </div>
+                <div class="sn-tb-item">
+                    <span>软件类别：</span>
+                    <select name='Type' class="sn-tb-type">
+                        <option>游戏软件</option>
+                        <option>多媒体教育软件</option>
+                        <option>财务软件</option>
+                        <option>多媒体软件</option>
+                        <option>开发工具</option>
+                        <option>系统软件</option>
+                        <option>CAD软件</option>
+                        <option>办公软件</option>
+                        <option>网络软件</option>
+                    </select>
+                </div>
+                <div class="sn-tb-item full">
+                    <span>如果列表中没有,请注明：</span>
+                    <input type="text" name="Other" required>
+                </div>
+                <div class="sn-tb-block-item" >
+                    <p class="text-center">您对加密锁的要求介绍<span class="require">*</span></p>
+                    <textarea  name="Context"></textarea>
+                    <p class="hint">备注:<span class="require">*</span>为必填项,请如实填写</p>
+                </div>
+                <p class="text-center" >
+                    <button type="button" class="sn-tb-submit">申请试用</button>
+                </p>
             </div>
+            </form>
         </div>
     </section>
 
