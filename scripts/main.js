@@ -266,8 +266,25 @@ $(document).ready(function () {
                 }
             });
         },
+        /**
+         * 浏览器判断
+         */
+        initBrowserVerision : function () {
+            var browser=navigator.appName;
+            var b_version=navigator.appVersion;
+            var version=b_version.split(";");
+            var trim_Version=version[1].replace(/[ ]/g,"");
+            if(browser=="Microsoft Internet Explorer")
+            {
+                if(trim_Version=="MSIE6.0"||trim_Version=="MSIE7.0"||trim_Version=="MSIE8.0"||trim_Version=="MSIE9.0")
+                {
+                    alert('您好，您的浏览器版本较低，如显示不正常，请升级浏览器到IE10以上.')
+                }
+            }
+        },
 
         run : function () {
+            initPage.initBrowserVerision();
             initPage.initMenuSlide();
             initPage.initSwiperEvent();
             initPage.initPartnersAnimation();
