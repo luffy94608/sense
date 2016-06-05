@@ -84,6 +84,7 @@ $(document).ready(function () {
          */
         initQQ : function () {
             setTimeout(function(){
+                BizQQWPA.addCustom({aty: '0', a: '0', nameAccount: 4006506701, selector: 'BizQQWPA3'});
                 BizQQWPA.addCustom({aty: '0', a: '0', nameAccount: 4006506701, selector: 'BizQQWPA2'});
                 BizQQWPA.addCustom({aty: '0', a: '0', nameAccount: 4006506701, selector: 'BizQQWPA'});
             },3000);
@@ -229,12 +230,12 @@ $(document).ready(function () {
                     picked_1_clock_doc_download:'http://115.29.189.225/Files/V1-v1.4-Doc.zip',
                     try_and_buy:'try_and_buy.html',
                     //解决方案
-                    solution:'',
-                    game_industry:'',
-                    manage_industry:'',
-                    architecture_industry:'',
-                    edu_and_doc:'',
-                    common_industry:'',
+                    solution:'solution.html',
+                    game_industry:'su_game.html',
+                    manage_industry:'su_manage.html',
+                    architecture_industry:'su_art.html',
+                    edu_and_doc:'su_edu.html',
+                    common_industry:'su_common.html',
                     //支持
                     support:'',
                     su_download:'download.html',
