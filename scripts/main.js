@@ -9,16 +9,18 @@ $(document).ready(function () {
          initMenuSlide : function () {
             var opts = {
                 menuItemSlideNode:$('.sn-header .menu .bg-slide'),
-                menuItemNode : $('.sn-header .menu>div')
+                menuItemNode : $('.sn-header .menu>div'),
+                menuItemSlideNodeStr:'.sn-header .menu .bg-slide',
+                menuItemNodeStr : '.sn-header .menu>div'
             };
-            opts.menuItemNode.mouseover(function () {
+            $(document).on('mouseover',opts.menuItemNodeStr,function () {
                 var left = $(this).offset().left;
                 $('.sub-menu,.sub-menu-group',$(this)).addClass('active');
                 if($(this).html()){
                     opts.menuItemSlideNode.stop().animate({'left':left},'fast');
                 }
             });
-            opts.menuItemNode.mouseout(function () {
+            $(document).on('mouseout',opts.menuItemNodeStr,function () {
                 $('.sub-menu,.sub-menu-group',$(this)).removeClass('active');
                 opts.menuItemSlideNode.stop().animate({'left':'-115px'},'fast');
             });
@@ -28,14 +30,14 @@ $(document).ready(function () {
          */
         initSiteMapAnimation:function () {
             var opts = {
-                target:$('.sn-sm-item .info,.snphc-link>a,.animate_hover_move'),
+                target:'.sn-sm-item .info,.snphc-link>a,.animate_hover_move',
                 left:'15px',
             };
-            opts.target.mouseover(function () {
+            $(document).on('mouseover',opts.target,function () {
                 var $this = $(this);
                 $this.stop().animate({'left':opts.left});
             });
-            opts.target.mouseout(function () {
+            $(document).on('mouseout',opts.target,function () {
                 var $this = $(this);
                 $this.stop().animate({'left':'0'});
             });
@@ -94,7 +96,8 @@ $(document).ready(function () {
          */
         initPartnersAnimation:function () {
             var opts = {
-                target:$('.sn-partners .sm-p-list img'),
+                target:'.sn-partners .sm-p-list img',
+                targetParent:'.sn-partners .sm-p-list li',
                 srcStr:'.png',
                 replaceStr:'_active.png',
                 hrefMap:[
@@ -113,13 +116,13 @@ $(document).ready(function () {
                     'http://eabax.com',
                 ]
             };
-            opts.target.parents('li').unbind().bind('click',function () {
+            $(document).on('click',opts.targetParent,function () {
                 var index = $(this).index();
                 if(opts.hrefMap[index]){
                     window.location.href= opts.hrefMap[index];
                 }
             });
-            opts.target.mouseover(function () {
+            $(document).on('mouseover',opts.target,function () {
                 var $this = $(this);
                 var src = $this.attr('src');
                 if(src.indexOf(opts.srcStr)!==-1 && src.indexOf(opts.replaceStr) ===-1){
@@ -128,7 +131,7 @@ $(document).ready(function () {
                 }
 
             });
-            opts.target.mouseout(function () {
+            $(document).on('mouseout',opts.target,function () {
                 var $this = $(this);
                 var src = $this.attr('src');
                 if(src.indexOf(opts.replaceStr)!==-1){
@@ -169,7 +172,7 @@ $(document).ready(function () {
                 },
             };
             // JavaScript Document
-            $('#sn_go_top').unbind().bind('click',function () {
+            $(document).on('click','#sn_go_top',function () {
                 var goTop=setInterval(function () {
                     opts.setScrollTop(opts.getScrollTop()/1.1);
                     if(opts.getScrollTop()<1){
@@ -184,6 +187,61 @@ $(document).ready(function () {
          */
         initFixedSnPhcItemHeight :function () {
             $('.sn-phc-item .snphc-desc').height($('.sn-phc-item .sn-phcd-center').height());
+        },
+        /**
+         * 初始化首页列表切换动画
+         */
+        initHomeSwitchBtn:function () {
+            var status= false;
+            $('.sn-phcm-list a').unbind().bind('click',function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                if(!status){
+                    var len=$('.sn_phc_menu').length;
+                    if(len>0){
+                        for (var i=0;i<len;i++){
+                            var tmp=$('.sn_phc_menu').eq(i);
+                            tmp.data('position',tmp.offset().top);
+                        }
+                    }
+                    status= true;
+                }
+                var initObj = $('.sn_phc_menu').eq(0);
+                var initId = '#'+initObj.attr('id');
+                var srcId = initObj.data('id');
+                if(!srcId){
+                    srcId = initId;
+                }
+                var srcPTop = $(srcId).offset().top;
+                var id = $(this).attr('href');
+                var targetTop = $(id).offset().top;
+                var srcPosition= $(srcId).data('position');
+                var targetPosition= $(id).data('position');
+
+                var diffSHeight = targetTop - srcPosition;
+                var diffTHeight = srcPTop - targetPosition;
+                initObj.data('id',id);
+                move(srcId)
+                    .set('opacity', '0.5')
+                    .y(diffSHeight)
+                    .end(function () {
+                        move(srcId)
+                            .set('opacity', '1')
+                            .duration(1000)
+                            .end();
+                    });
+                move(id)
+                    .set('opacity', '0.5')
+                    .y(diffTHeight)
+                    .end(function () {
+                        move(id)
+                            .set('opacity', '1')
+                            .duration(1000)
+                            .end();
+                    });
+
+            });
+
         },
         /**
          * 网站跳转``
@@ -292,13 +350,13 @@ $(document).ready(function () {
             initPage.initScrollTop();
             initPage.initLocationUrlEvent();
             initPage.initFixedSnPhcItemHeight();
+            initPage.initHomeSwitchBtn();
             initPage.initQQ();
             initPage.initTabChangeEvent();
             initPage.initRecruitLiEvent();
         }
     };
+    initPage.run();
 
-    setTimeout(function () {
-        initPage.run();
-    },1000);
+
 });
