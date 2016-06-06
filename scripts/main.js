@@ -24,6 +24,12 @@ $(document).ready(function () {
                 $('.sub-menu,.sub-menu-group',$(this)).removeClass('active');
                 opts.menuItemSlideNode.stop().animate({'left':'-115px'},'fast');
             });
+            $(document).on('mouseover','.sub-menu>li',function () {
+                $('.sub-child-menu',$(this)).addClass('active');
+            });
+            $(document).on('mouseout','.sub-menu>li',function () {
+                $('.sub-child-menu',$(this)).removeClass('active');
+            });
         },
         /**
          * 初始化网站地图 右移动动画
