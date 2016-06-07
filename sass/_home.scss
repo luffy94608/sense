@@ -73,6 +73,11 @@
       img{
         width: 96px;
       }
+      &.active{
+        a>p{
+          color: $text-6;
+        }
+      }
     }
   }
 }

@@ -200,6 +200,29 @@ $(document).ready(function () {
         initHomeSwitchBtn:function () {
             var status= false;
             $('.sn-phcm-list a').unbind().bind('click',function (e) {
+                var othersLi = $(this).parents('li').siblings();
+                var imgs = othersLi.find('img');
+                if(imgs.length){
+                    var srcStr = '.png';
+                    var activeStr = '_active.png';
+                    for (var j=0;j<imgs.length;j++){
+                        var tmpObj = othersLi.find('img').eq(j);
+                        var tmpImg = tmpObj.attr('src');
+                        if(tmpImg.indexOf(activeStr)!==-1){
+                             tmpImg = tmpImg.replace(activeStr,srcStr);
+                            tmpObj.attr('src',tmpImg);
+                        }
+                    }
+                    var currentImgObj = $(this).find('img');
+                    var currentImg =currentImgObj.attr('src');
+                    if(currentImg.indexOf(srcStr)!==-1 && currentImg.indexOf(activeStr) ===-1){
+                        currentImg = currentImg.replace(srcStr,activeStr);
+                        currentImgObj.attr('src',currentImg);
+                    }
+                }
+                othersLi.removeClass('active');
+                $(this).parents('li').removeClass('active').addClass('active');
+
                 e.preventDefault();
                 e.stopPropagation();
                 if(!status){
