@@ -302,7 +302,11 @@ $(document).ready(function () {
                     common_industry:'su_common.html',
                     //支持
                     support:'',
+                    su_platform:'su_platform.html',
                     su_download:'download.html',
+                    download_5:'download_5.html',
+                    download_4s:'download_4s.html',
+                    download_1:'download_1.html',
                     su_problem:'problem.html',
                     su_feedback:'feedback.html',
                     su_contact:'contact.html',
