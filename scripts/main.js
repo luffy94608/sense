@@ -364,6 +364,9 @@ $(document).ready(function () {
             var browser=navigator.appName;
             var b_version=navigator.appVersion;
             var version=b_version.split(";");
+            if(version.length<2){
+                return false;
+            }
             var trim_Version=version[1].replace(/[ ]/g,"");
             if(browser=="Microsoft Internet Explorer")
             {
@@ -389,7 +392,7 @@ $(document).ready(function () {
             initPage.initRecruitLiEvent();
         }
     };
-    initPage.run();
 
+    initPage.run();
 
 });
