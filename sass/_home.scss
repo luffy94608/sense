@@ -35,6 +35,16 @@
     width: 100%;
   }
 }
+.sn-partners-slide{
+  margin: 40px auto!important;
+  //padding: 0 50px;
+  .sn-swiper-item-2{
+    img{
+      height: 60px;
+    }
+  }
+}
+
 .swiper-button-prev.sn-pre-btn,
 .swiper-button-next.sn-next-btn
 {

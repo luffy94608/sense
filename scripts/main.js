@@ -101,6 +101,10 @@ $(document).ready(function () {
          * 合作伙伴hover
          */
         initPartnersAnimation:function () {
+            $(document).on('click','.swiper-button-black',function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+            });
             var opts = {
                 target:'.sn-partners .sm-p-list img',
                 targetParent:'.sn-partners .sm-p-list li',
@@ -150,7 +154,7 @@ $(document).ready(function () {
          * 初始化轮播 swiper
          */
         initSwiperEvent : function () {
-            var mySwiper = new Swiper('.swiper-container', {
+            var mySwiper = new Swiper('.swiper-slide-container', {
                 autoplay: 3000,//可选选项，自动滑动
                 loop : true,
                 effect : 'fade',
@@ -164,6 +168,17 @@ $(document).ready(function () {
                 nextButton:'.swiper-button-next',
 
             });
+
+            var mySwiper2 = new Swiper('.sn-partners-slide', {
+                paginationClickable: true,
+                slidesPerView: 5,
+                spaceBetween: 30,
+                prevButton:'.swiper-button-prev',
+                nextButton:'.swiper-button-next',
+
+            });
+
+
         },
         /**
          * 返回顶部
