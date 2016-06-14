@@ -191,24 +191,38 @@ $(document).ready(function () {
          * 返回顶部
          */
         initScrollTop :function () {
-            var opts = {
-                getScrollTop: function () {
-                    return document.documentElement.scrollTop;
-                },
-                setScrollTop: function (value) {
-                    document.documentElement.scrollTop = value;
-                },
-            };
-            // JavaScript Document
-            $(document).on('click','#sn_go_top',function () {
-                var goTop=setInterval(function () {
-                    opts.setScrollTop(Math.floor(opts.getScrollTop()/1.1));
-                    if(opts.getScrollTop()<1){
-                        clearInterval(goTop);
-                    }
-                },10);
 
-            });
+            var oTop = document.getElementById("to_top");
+            var screenw = document.documentElement.clientWidth || document.body.clientWidth;
+            var screenh = document.documentElement.clientHeight || document.body.clientHeight;
+            oTop.style.left = screenw - oTop.offsetWidth +"px";
+            oTop.style.top = screenh - oTop.offsetHeight + "px";
+            window.onscroll = function(){
+                var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+                oTop.style.top = screenh - oTop.offsetHeight + scrolltop +"px";
+            }
+            oTop.onclick = function(){
+                document.documentElement.scrollTop = document.body.scrollTop =0;
+            };
+
+            // var opts = {
+            //     getScrollTop: function () {
+            //         return document.documentElement.scrollTop;
+            //     },
+            //     setScrollTop: function (value) {
+            //         document.documentElement.scrollTop = value;
+            //     },
+            // };
+            // // JavaScript Document
+            // $(document).on('click','#sn_go_top',function () {
+            //     var goTop=setInterval(function () {
+            //         opts.setScrollTop(Math.floor(opts.getScrollTop()/1.1));
+            //         if(opts.getScrollTop()<1){
+            //             clearInterval(goTop);
+            //         }
+            //     },10);
+            //
+            // });
         },
         /**
          * 修正 sn-phc-item 高度
