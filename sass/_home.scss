@@ -37,9 +37,31 @@
 }
 
 .sn-partners-slide{
-  margin: 40px auto!important;
-  //padding: 0 50px;
+  //margin: 40px auto!important;
+  padding: 0 50px;
+  position: relative;
+  &:before,
+  &:after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 50px;
+    height: 100%;
+    background-color: white;
+  }
+  &:before{
+    left: 0;
+  }
+  &:after{
+    right: 0;
+  }
   .sn-swiper-item-2{
+    a{
+      display: inline-block;
+      width: 180px;
+    }
     img{
       height: 60px;
     }

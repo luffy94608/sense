@@ -202,7 +202,7 @@ $(document).ready(function () {
             // JavaScript Document
             $(document).on('click','#sn_go_top',function () {
                 var goTop=setInterval(function () {
-                    opts.setScrollTop(opts.getScrollTop()/1.1);
+                    opts.setScrollTop(Math.floor(opts.getScrollTop()/1.1));
                     if(opts.getScrollTop()<1){
                         clearInterval(goTop);
                     }
