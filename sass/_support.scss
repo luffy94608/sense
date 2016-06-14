@@ -12,11 +12,11 @@
         padding: 70px 0 ;
         border-bottom: $border-style;
         &>p{
-          font-size: 1.6rem;
+          font-size: 16px;
           color: $text-3;
           line-height: 2;
           &.title{
-            font-size: 2.4rem;
+            font-size: 24px;
             color: $text-3;
             font-weight: bolder;
           }
@@ -50,11 +50,11 @@
       }
       &>p{
         color: $text-4;
-        font-size: 1.8rem;
+        font-size: 18px;
         margin: 10px 0;
       }
       &>input{
-        font-size: 1.4rem;
+        font-size: 14px;
         width: 220px;
         padding: 10px 5px;
         outline: none;
@@ -64,7 +64,7 @@
         width: 468px;
         height: 200px;
         resize: none;
-        font-size: 1.4rem;
+        font-size: 14px;
         line-height: 2;
         padding: 10px;
         border: $border-style;
@@ -77,7 +77,7 @@
       line-height: 35px;
       color: $text-5;
       border: none;
-      font-size: 1.8rem;
+      font-size: 18px;
       background-color: $text-9;
       @include box-shadow(4px 4px 2px -1px $border-color);
     }
@@ -86,7 +86,7 @@
     float: left;
     display: inline-block;
     margin-left: 100px;
-    font-size: 2.4rem;
+    font-size: 24px;
     color: $text-4;
     &>p{
       padding: 10px 0;
@@ -120,7 +120,7 @@
     }
     .sn-sul-title{
       color: $text-5;
-      font-size: 3.6rem;
+      font-size: 36px;
       font-weight: bolder;
       position: absolute;
       top: 10px;
@@ -140,7 +140,7 @@
       left: 0;
       right: 0;
       color: $text-5;
-      font-size: 3rem;
+      font-size: 30px;
       font-weight: bolder;
       line-height: 70px;
       .sn-suf-btn{
@@ -151,7 +151,7 @@
         height: 40px;
         line-height: 40px;
         width: 130px;
-        font-size: 1.8rem;
+        font-size: 18px;
         margin: 20px auto;
         @include border-radius(50px);
         @include transition(all 0.6s cubic-bezier(0.6, -0.21, 0, 1.6));
@@ -162,12 +162,12 @@
   }
   .sn-suf-detail{
     color: $text-3;
-    font-size: 1.8rem;
+    font-size: 18px;
     margin: 20px auto;
     .sn-sufd-title{
       margin: 20px 0;
       text-align: center;
-      font-size: 3rem;
+      font-size: 30px;
     }
   }
 }
@@ -179,13 +179,13 @@
   }
   .sn-cli-title{
     color: $text-3;
-    font-size: 2.4rem;
+    font-size: 24px;
     font-weight: bolder;
     margin: 10px 0;
   }
   .sn-cli-desc{
     color: $text-3;
-    font-size: 1.6rem;
+    font-size: 16px;
     white-space: pre-line;
   }
 }
@@ -198,6 +198,6 @@
     top: 30%;
     color: $text-5;
     font-weight: bolder;
-    font-size: 3rem;
+    font-size: 30px;
   }
 }

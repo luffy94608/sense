@@ -135,42 +135,104 @@
 
                 </div>
                 <div id="tab_2" class="sn-tab-pane ">
-
-                    <section class="sn-common-list">
-                        <div class="wrap text-left">
-                            <div class="sn-cl-item">
-                                <p class="sn-cli-title">如何开始体验深思云授权？</p>
-                                <p class="sn-cli-desc">需要建立深思云账号后，登录账号才可以进入云平台体验深思云授权。登录深思官网，点击右上角的“云账号注册” 后建立账号。
-                                </p>
-                            </div>
-                            <div class="sn-cl-item">
-                                <p class="sn-cli-title">如何开始加密流程？</p>
-                                <p class="sn-cli-desc">简单流程就是下面几步：
-                                    1.	第一步，创建产品,填写许可ID和产品名称。
-                                    2.	第二步，创建模板，方便大批量发放授权。
-                                    3.	第三步，下载SDK和外壳工具加密APP。
-                                    4.	第四步，给最终用户发放授权（加密锁或云锁）。
-                                    5.	最后一步，用户登录账号开始使用APP。
-                                </p>
-                            </div>
-                            <div class="sn-cl-item">
-                                <p class="sn-cli-title">如何添加产品并定义许可模板？</p>
-                                <p class="sn-cli-desc">添加产品
-                                    整个加密体系中需要先“创建产品”来定义产品，其中最为关键的就是“产品编号”，系统中标识产品、及对应的许可都使用此编号。上面加密过程中绑定的许可ID也是这个编号。 创建产品时您还可以填入更多的信息，后续所有的操作都要以此为基础， 数据区只能通过许可 API 使用，需要和开发人员确定。
-                                    定义许可模板
-                                    添加产品后，您就可以为此产品添加许可模版了，模版的作用是方便发放许可、控制发放许可的范围，即后面的许可签发只能在模版的基础上操作，产品经理或销售经理只要关注许可模版即可。模板分为正式模板和试用模板，区分两者主要目标是为了用户免费试用 不需要经过开发商审批就能自动发送授权。具体步骤如下：
-                                    •	创建模板，我们先选正式模板；
-                                    •	填入相关的许可信息即可；
-                                    •	创建用户，云许可需要针对账号发放许可，请先创建账号。
-                                </p>
-                            </div>
-                            <div class="sn-cl-item">
-                                <p class="sn-cli-title">如何使用许可</p>
-                                <p class="sn-cli-desc">至此，用户锁已经有了相应的合法许可，插入这把用户锁，加密的程序即可以正常进行，否则无法执行。一个完整的保护、许可发布流程即告完成。按照销售策略的不同，可以针对这个产品创建不同的许可模块，以发布不同的许可来满足业务，更进一步，您还可以申请成为深思云开发者，直接发布云许可，给软件用户带来更好的体验，而在这个过程中，加密后的软件不需要任何改动。
-                                </p>
-                            </div>
+                    <section class="sn-we-rct margin-t-20">
+                        <div class="wrap clear-fix text-left">
+                            <ul class="sn-wr-list">
+                                <li>
+                                    <div class="sn-wrl-head circle">
+                                        <span class="sn-wlh-title"><i class="sn-wlh-sort"></i>如何开始体验深思云授权？</span>
+                                        <span class="sn-wlh-time"></span>
+                                        <i class="font-size-24 icon-angle-up arrow"></i>
+                                    </div>
+                                    <div class="sn-wrl-desc">
+                                        <div class="sn-wr-ld-txt pre-line">
+                                            需要建立深思云账号后，登录账号才可以进入云平台体验深思云授权。登录深思官网，点击右上角的“云账号注册” 后建立账号。
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sn-wrl-head circle">
+                                        <span class="sn-wlh-title"><i class="sn-wlh-sort"></i>如何开始加密流程？</span>
+                                        <span class="sn-wlh-time"></span>
+                                        <i class="font-size-24 icon-angle-up arrow"></i>
+                                    </div>
+                                    <div class="sn-wrl-desc">
+                                        <div class="sn-wr-ld-txt pre-line">简单流程就是下面几步：
+                                            1.	第一步，创建产品,填写许可ID和产品名称。
+                                            2.	第二步，创建模板，方便大批量发放授权。
+                                            3.	第三步，下载SDK和外壳工具加密APP。
+                                            4.	第四步，给最终用户发放授权（加密锁或云锁）。
+                                            5.	最后一步，用户登录账号开始使用APP。
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sn-wrl-head circle">
+                                        <span class="sn-wlh-title"><i class="sn-wlh-sort"></i>如何添加产品并定义许可模板？</span>
+                                        <span class="sn-wlh-time"></span>
+                                        <i class="font-size-24 icon-angle-up arrow"></i>
+                                    </div>
+                                    <div class="sn-wrl-desc">
+                                        <div class="sn-wr-ld-txt pre-line">添加产品
+                                            整个加密体系中需要先“创建产品”来定义产品，其中最为关键的就是“产品编号”，系统中标识产品、及对应的许可都使用此编号。上面加密过程中绑定的许可ID也是这个编号。 创建产品时您还可以填入更多的信息，后续所有的操作都要以此为基础， 数据区只能通过许可 API 使用，需要和开发人员确定。
+                                            定义许可模板
+                                            添加产品后，您就可以为此产品添加许可模版了，模版的作用是方便发放许可、控制发放许可的范围，即后面的许可签发只能在模版的基础上操作，产品经理或销售经理只要关注许可模版即可。模板分为正式模板和试用模板，区分两者主要目标是为了用户免费试用 不需要经过开发商审批就能自动发送授权。具体步骤如下：
+                                            •	创建模板，我们先选正式模板；
+                                            •	填入相关的许可信息即可；
+                                            •	创建用户，云许可需要针对账号发放许可，请先创建账号。
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sn-wrl-head circle">
+                                        <span class="sn-wlh-title"><i class="sn-wlh-sort"></i>如何使用许可？</span>
+                                        <span class="sn-wlh-time"></span>
+                                        <i class="font-size-24 icon-angle-up arrow"></i>
+                                    </div>
+                                    <div class="sn-wrl-desc">
+                                        <div class="sn-wr-ld-txt pre-line">至此，用户锁已经有了相应的合法许可，插入这把用户锁，加密的程序即可以正常进行，否则无法执行。一个完整的保护、许可发布流程即告完成。按照销售策略的不同，可以针对这个产品创建不同的许可模块，以发布不同的许可来满足业务，更进一步，您还可以申请成为深思云开发者，直接发布云许可，给软件用户带来更好的体验，而在这个过程中，加密后的软件不需要任何改动。
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </section>
+
+                    <!--<section class="sn-common-list">-->
+                        <!--<div class="wrap text-left">-->
+                            <!--<div class="sn-cl-item">-->
+                                <!--<p class="sn-cli-title">如何开始体验深思云授权？</p>-->
+                                <!--<p class="sn-cli-desc">需要建立深思云账号后，登录账号才可以进入云平台体验深思云授权。登录深思官网，点击右上角的“云账号注册” 后建立账号。-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="sn-cl-item">-->
+                                <!--<p class="sn-cli-title">如何开始加密流程？</p>-->
+                                <!--<p class="sn-cli-desc">简单流程就是下面几步：-->
+                                    <!--1.	第一步，创建产品,填写许可ID和产品名称。-->
+                                    <!--2.	第二步，创建模板，方便大批量发放授权。-->
+                                    <!--3.	第三步，下载SDK和外壳工具加密APP。-->
+                                    <!--4.	第四步，给最终用户发放授权（加密锁或云锁）。-->
+                                    <!--5.	最后一步，用户登录账号开始使用APP。-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="sn-cl-item">-->
+                                <!--<p class="sn-cli-title">如何添加产品并定义许可模板？</p>-->
+                                <!--<p class="sn-cli-desc">添加产品-->
+                                    <!--整个加密体系中需要先“创建产品”来定义产品，其中最为关键的就是“产品编号”，系统中标识产品、及对应的许可都使用此编号。上面加密过程中绑定的许可ID也是这个编号。 创建产品时您还可以填入更多的信息，后续所有的操作都要以此为基础， 数据区只能通过许可 API 使用，需要和开发人员确定。-->
+                                    <!--定义许可模板-->
+                                    <!--添加产品后，您就可以为此产品添加许可模版了，模版的作用是方便发放许可、控制发放许可的范围，即后面的许可签发只能在模版的基础上操作，产品经理或销售经理只要关注许可模版即可。模板分为正式模板和试用模板，区分两者主要目标是为了用户免费试用 不需要经过开发商审批就能自动发送授权。具体步骤如下：-->
+                                    <!--•	创建模板，我们先选正式模板；-->
+                                    <!--•	填入相关的许可信息即可；-->
+                                    <!--•	创建用户，云许可需要针对账号发放许可，请先创建账号。-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="sn-cl-item">-->
+                                <!--<p class="sn-cli-title">如何使用许可</p>-->
+                                <!--<p class="sn-cli-desc">至此，用户锁已经有了相应的合法许可，插入这把用户锁，加密的程序即可以正常进行，否则无法执行。一个完整的保护、许可发布流程即告完成。按照销售策略的不同，可以针对这个产品创建不同的许可模块，以发布不同的许可来满足业务，更进一步，您还可以申请成为深思云开发者，直接发布云许可，给软件用户带来更好的体验，而在这个过程中，加密后的软件不需要任何改动。-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</section>-->
                 </div>
                 <div id="tab_3" class="sn-tab-pane ">
                     <p class="sn-ld-section-title color-blue bolder">精锐5</p>

@@ -75,15 +75,22 @@ $(document).ready(function () {
                 target:$('.sn-wr-list>li'),
                 targetCon:'.sn-wrl-desc',
             };
-            opts.target.click(function () {
+            opts.target.unbind().bind('click',function () {
                 var $this = $(this);
                 if($(opts.targetCon,$this).html()==0){
                     return false;
                 }
-                opts.target.removeClass('active');
-                $this.siblings().find(opts.targetCon).slideUp();
-                $(opts.targetCon,$this).slideDown();
-                $this.addClass('active');
+                var siblingsLis  = $this.siblings();
+                siblingsLis.removeClass('active');
+                siblingsLis.find(opts.targetCon).slideUp();
+
+                if($this.hasClass('active')){
+                    $(opts.targetCon,$this).slideUp();
+                    $this.removeClass('active');
+                }else{
+                    $(opts.targetCon,$this).slideDown();
+                    $this.addClass('active');
+                }
             });
 
         },

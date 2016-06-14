@@ -9,21 +9,21 @@
     left: 0;
     right: 0;
     text-align: left;
-    font-size: 2rem;
+    font-size: 20px;
     color: $text-5;
     margin: 0 auto;
     @include transform(translateY(-50%));
     &>p{
       width: 270px;
       &:first-child{
-        font-size: 3rem;
+        font-size: 30px;
         font-weight: bolder;
         margin-bottom: 10px;
       }
     }
     .reg-btn{
       display: inline-block;
-      font-size: 2rem;
+      font-size: 20px;
       @include border-radius(2px);
       padding: 5px 30px;
       margin-top: 20px;
@@ -35,6 +35,7 @@
     width: 100%;
   }
 }
+
 .sn-partners-slide{
   margin: 40px auto!important;
   //padding: 0 50px;
@@ -68,7 +69,7 @@
   background-color: $bg-color-4;
   .sn-phcm-title{
     color: $text-8;
-    font-size: 2.4rem;
+    font-size: 24px;
   }
   .sn-phcm-list{
     margin-top: 50px;
@@ -79,9 +80,14 @@
       width: 25%;
       a{
         color: $text-1;
+        &>p{
+          font-weight: bolder;
+          font-size: 20px;
+          line-height: 3;
+        }
       }
       img{
-        width: 96px;
+        width: 110px;
       }
       &.active{
         a>p{
@@ -107,7 +113,7 @@
         height: 107px;
         line-height: 140px;
         color: $text-5;
-        font-size: 2.9rem;
+        font-size: 29px;
         font-weight: bolder;
         text-indent: 1.2em;
         display: inline-block;
@@ -115,28 +121,28 @@
       }
       .snphc-title{
         margin-top: 10px;
-        font-size: 2.4rem;
+        font-size: 24px;
         font-weight: bold;
       }
       .snphc-title-2{
         margin-top: 10px;
-        font-size: 3rem;
+        font-size: 30px;
         font-weight: bold;
         margin-bottom: 20px;
       }
       .snphc-abstract{
-        font-size: 1.6rem;
+        font-size: 16px;
         line-height: 2;
       }
       .snphc-content{
-        font-size: 1.6rem;
+        font-size: 16px;
       }
       .snphc-link{
         margin-top: 15px;
         &>a{
           position: relative;
           left: 0;
-          font-size: 1.6rem;
+          font-size: 16px;
         }
       }
     }
@@ -152,7 +158,7 @@
 //成长历程
 .sn-we-route{
   .sn-wr-title{
-    font-size: 4rem;
+    font-size: 40px;
     color: $text-9;
     font-weight: bolder;
     margin-bottom: 50px;
@@ -160,7 +166,7 @@
   }
   .sn-wr-list{
     position: relative;
-    .icon-time{
+    .icon-self-time{
       position: absolute;
       top: -35px;
       left: 173px;
@@ -195,7 +201,7 @@
       &:before{
         content: attr(data-group);
         color: $text-6;
-        font-size: 3rem;
+        font-size: 30px;
         display: block;
       }
       &:after{
@@ -211,7 +217,7 @@
       }
       &>li{
         margin-left: 150px;
-        font-size: 1.6rem;
+        font-size: 16px;
         color: $text-3;
         padding: 5px 0;
         &:before{
@@ -236,17 +242,17 @@
     .sn-cls-title{
       color: $text-2;
       font-weight: bolder;
-      font-size: 2.4rem;
+      font-size: 24px;
     }
     .sn-cls-sub-title{
       color: $text-2;
       font-weight: bolder;
-      font-size: 1.8rem;
+      font-size: 18px;
     }
     .sn-cls-desc{
       color: $text-3;
       line-height: 2;;
-      font-size: 1.6rem;
+      font-size: 16px;
     }
   }
 }
@@ -258,18 +264,18 @@
     .sn-pti-title{
       color: $text-2;
       font-weight: bolder;
-      font-size: 2.4rem;
+      font-size: 24px;
     }
     .sn-pti-sub-title{
       color: $text-2;
       font-weight: bolder;
-      font-size: 1.8rem;
+      font-size: 18px;
     }
     .sn-pti-desc{
       margin-top: 20px;
       color: $text-3;
       line-height: 2;;
-      font-size: 1.6rem;
+      font-size: 16px;
     }
   }
 }
