@@ -192,7 +192,7 @@ $(document).ready(function () {
          */
         initScrollTop :function () {
 
-            var oTop = document.getElementById("to_top");
+            var oTop = document.getElementById("sn_go_top");
             var screenw = document.documentElement.clientWidth || document.body.clientWidth;
             var screenh = document.documentElement.clientHeight || document.body.clientHeight;
             oTop.style.left = screenw - oTop.offsetWidth +"px";
