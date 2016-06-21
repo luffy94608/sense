@@ -413,6 +413,18 @@ $(document).ready(function () {
             }
         },
 
+        /**
+         *
+         */
+        initHomeFixed:function () {
+          var url = window.location.href;
+            if(url.indexOf('index.html')===-1){
+                $('.sn-header').css('position','relative');
+            }else{
+                $('.sn-header').css('position','fixed');
+            }
+        },
+
         run : function () {
             initPage.initBrowserVerision();
             initPage.initMenuSlide();
@@ -426,6 +438,7 @@ $(document).ready(function () {
             initPage.initQQ();
             initPage.initTabChangeEvent();
             initPage.initRecruitLiEvent();
+            initPage.initHomeFixed();
         }
     };
 

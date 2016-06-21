@@ -238,13 +238,17 @@
         @include background-size(32px 32px);
       }
       &>li{
-        margin-left: 150px;
+        position: relative;
+        margin-left: 190px;
         font-size: 16px;
         color: $text-3;
         padding: 5px 0;
         &:before{
           content: '';
           display: inline-block;
+          position: absolute;
+          left: -40px;
+          top: 15px;
           width: 25px;
           height: 1px;
           vertical-align: middle;
@@ -279,7 +283,7 @@
   }
 }
 
-//用户工具 授权管理工具
+//开发商工具 授权管理工具
 .sn-pt-section{
   .sn-pt-item{
     margin: 20px 0;
