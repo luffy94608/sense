@@ -233,12 +233,12 @@ a{
     height: $height;
     line-height: $height;
   }
-  .login{
+  .sn-login{
     color: $text-9;
-    font-size: 13px;
+    font-size: 14px;
     border: 1px solid $text-9;
-    @include border-radius(2px);
-    padding: 5px;
+    @include border-radius(1px);
+    padding: 6px 14px;
   }
 }
 
@@ -420,12 +420,12 @@ a{
 //公共大标题
 .sn-big-title{
   font-size: 40px;
-  color: $text-9;
+  color: $text-8;
   font-weight: bolder;
 }
 .sn-sub-title{
-  font-size: 14px;
-  color: $text-3;
+  font-size: 16px;
+  color: $text-2;
   line-height: 2;
 }
 //渐变背景

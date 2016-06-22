@@ -148,15 +148,18 @@
       }
       .snphc-title-2{
         margin-top: 10px;
-        font-size: 30px;
+        font-size: 24px;
         font-weight: bold;
+        color: $text-1;
         margin-bottom: 20px;
       }
       .snphc-abstract{
+        color: $text-2;
         font-size: 16px;
         line-height: 2;
       }
       .snphc-content{
+        color: $text-2;
         font-size: 16px;
       }
       .snphc-link{
@@ -241,7 +244,7 @@
         position: relative;
         margin-left: 190px;
         font-size: 16px;
-        color: $text-3;
+        color: $text-2;
         padding: 5px 0;
         &:before{
           content: '';
@@ -276,7 +279,7 @@
       font-size: 18px;
     }
     .sn-cls-desc{
-      color: $text-3;
+      color: $text-2;
       line-height: 2;;
       font-size: 16px;
     }
@@ -288,7 +291,7 @@
   .sn-pt-item{
     margin: 20px 0;
     .sn-pti-title{
-      color: $text-2;
+      color: $text-1;
       font-weight: bolder;
       font-size: 24px;
     }
@@ -299,7 +302,7 @@
     }
     .sn-pti-desc{
       margin-top: 20px;
-      color: $text-3;
+      color: $text-2;
       line-height: 2;;
       font-size: 16px;
     }

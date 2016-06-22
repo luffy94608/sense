@@ -81,14 +81,14 @@
         }
         .sn-wlh-title{
           font-size: 18px;
-          color: $text-3;
+          color: $text-1;
           &.circle{
             content: '';
           }
         }
         .sn-wlh-time{
           font-size: 16px;
-          color: $text-4;
+          color: $text-1;
           float: right;
           margin-right: 40px;
         }
@@ -96,7 +96,7 @@
       .sn-wrl-desc{
         display: none;
         .sn-wr-ld-txt{
-          color: $text-3;
+          color: $text-2;
           font-size: 14px;
           line-height: 2;
           padding: 0 20px 20px 0;
@@ -116,7 +116,7 @@
             }
           }
           &>span{
-            color: $text-3;
+            color: $text-2;
             font-size: 14px;
             &:first-child{
               font-weight: bolder;
@@ -124,7 +124,7 @@
           }
           .sn-wrli-content{
             margin-left: 75px;
-            color: $text-3;
+            color: $text-2;
             font-size: 14px;
             white-space: pre-line;
             line-height: 20px;
@@ -152,13 +152,13 @@
 .sn-we-news{
   padding-bottom: 50px;
   .sn-wen-title{
-    color: $text-3;
+    color: $text-1;
     font-size: 24px;
     font-weight: bolder;
     text-align: center;
   }
   .sn-wen-content{
-    color: $text-3;
+    color: $text-2;
     font-size: 16px;
     line-height: 2;
     white-space: pre-line;
