@@ -5,13 +5,18 @@
 @import "variables";
 @import "icons";
 
-.clear-fix:after{
-  clear:both;
-  content:".";
-  display:block;
-  height:0;
-  visibility:hidden;
+.clear-fix{
+  *zoom:1;
+  &:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: "";
+    clear: both;
+    height: 0;
+  }
 }
+
 .fl{
   float: left!important;
 }
