@@ -384,16 +384,16 @@ a{
 // 当前位置
 .sn-page-bar{
   position: relative;
-  height: 110px;
+  height: 60px;
   margin-top: 15px;
 
   .cloud{
-    height: 210px;
+    height: 110px;
     width: 100%;
     position: absolute;
     top: -100px;
     z-index: 1;
-    background: url("../images/cloud.png") repeat-x center;
+    background: url("../images/cloud_down.png") repeat-x center;
   }
   .sn-pb-content{
     position: relative;
