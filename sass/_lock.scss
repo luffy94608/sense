@@ -221,6 +221,80 @@
   }
 }
 
+///加密锁列表
+.sn-lock-list{
+  .snl-list{
+     li{
+       padding: 50px 0;
+       @extend .clear-fix;
+       border-bottom: $border-style;
+       &:last-child{
+         border-bottom: none;
+       }
+      .sn-ll-pic{
+        width: 49%;
+        text-align: center;
+        border-right: $border-style;
+        .ll-pic{
+          width: 350px;
+          margin: 0 auto;
+        }
+        .ll-pic-list{
+          .ll-pl-item{
+            width: 25%;
+            margin-left: 25px;
+            float:  left;
+            border: $border-style;
+            &>img{
+              width: 80%;
+            }
+            &>p{
+              font-size: 14px;
+              color: $text-2;
+              height: 25px;
+              line-height: 25px;
+              background-color: $border-color;
+            }
+
+            &,&>p{
+              @include transition(all .3s ease);
+            }
+            &:hover{
+              border: 1px solid $text-9;
+              &>p{
+                color: $text-5;
+                background-color: $text-9;
+              }
+            }
+          }
+        }
+      }
+       .sn-ll-detail{
+         width: 49%;
+         .ll-title{
+           font-size: 24px;
+           font-weight: bold;
+           color: $text-9;
+           margin: 20px 0;
+         }
+         .ll-desc{
+           white-space: pre-line;
+           font-size: 16px;
+           line-height: 30px;
+           color: $text-3;
+
+         }
+         .ll-link{
+           a{
+             font-size: 16px;
+           }
+           margin: 10px 0;
+         }
+       }
+     }
+  }
+}
+
 
 //试用及购买
 .sn-try-buy{

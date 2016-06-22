@@ -331,7 +331,7 @@ $(document).ready(function () {
                     auth_tools:'auth_tools.html',
                     user_tools:'user_tools.html',
                     //加密锁
-                    locks:'',
+                    locks:'locks.html',
                     picked_5:'lock_jr5_std.html',//标准版
                     picked_5_download:'http://115.29.189.225/Files/V5-Setup.zip',//标准版
                     picked_5_bt:'lock_jr5_bt.html',//蓝牙版
