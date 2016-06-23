@@ -234,9 +234,9 @@ a{
     line-height: $height;
   }
   .sn-login{
-    color: $text-9;
+    color: $text-5;
     font-size: 14px;
-    border: 1px solid $text-9;
+    background-color: $text-8;
     @include border-radius(1px);
     padding: 6px 14px;
   }

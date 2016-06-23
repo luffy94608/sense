@@ -4,6 +4,16 @@
 $(document).ready(function () {
     var initPage = {
         /**
+         * 获取url参数
+         * @param name
+         * @returns {null}
+         */
+         getParams :function(name) {
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if(r!=null)return  unescape(r[2]); return null;
+         },
+        /**
          * 初始化menu slide
          */
          initMenuSlide : function () {
@@ -66,6 +76,15 @@ $(document).ready(function () {
                     $(id).addClass('active');
                 }
             });
+            var tab = initPage.getParams('tab');
+            if(tab>0) {
+                opts.target.removeClass('active');
+                var obj = opts.target.eq(tab);
+                var tmpId = obj.find('a').data('id');
+                obj.addClass('active');
+                opts.targetCon.removeClass('active');
+                $(tmpId).addClass('active');
+            }
         },
         /**
          * 初始化诚聘精英 列表伸缩效果
@@ -205,24 +224,6 @@ $(document).ready(function () {
                 document.documentElement.scrollTop = document.body.scrollTop =0;
             };
 
-            // var opts = {
-            //     getScrollTop: function () {
-            //         return document.documentElement.scrollTop;
-            //     },
-            //     setScrollTop: function (value) {
-            //         document.documentElement.scrollTop = value;
-            //     },
-            // };
-            // // JavaScript Document
-            // $(document).on('click','#sn_go_top',function () {
-            //     var goTop=setInterval(function () {
-            //         opts.setScrollTop(Math.floor(opts.getScrollTop()/1.1));
-            //         if(opts.getScrollTop()<1){
-            //             clearInterval(goTop);
-            //         }
-            //     },10);
-            //
-            // });
         },
         /**
          * 修正 sn-phc-item 高度
@@ -351,7 +352,7 @@ $(document).ready(function () {
                     picked_1:'lock_lr1_std.html',
                     picked_1_clock_sdk_download:'http://115.29.189.225/Files/V1-v1.4-Res.zip',
                     picked_1_clock_doc_download:'http://115.29.189.225/Files/V1-v1.4-Doc.zip',
-                    try_and_buy:'try_and_buy.html',
+                    try_and_buy:'lock_jr5_std.html?tab=2',
                     //解决方案
                     solution:'solution.html',
                     game_industry:'su_game.html',
@@ -431,7 +432,6 @@ $(document).ready(function () {
             initPage.initSwiperEvent();
             initPage.initPartnersAnimation();
             initPage.initSiteMapAnimation();
-            initPage.initScrollTop();
             initPage.initLocationUrlEvent();
             initPage.initFixedSnPhcItemHeight();
             initPage.initHomeSwitchBtn();
@@ -439,6 +439,9 @@ $(document).ready(function () {
             initPage.initTabChangeEvent();
             initPage.initRecruitLiEvent();
             initPage.initHomeFixed();
+            setTimeout(function () {
+                initPage.initScrollTop();
+            },300)
         }
     };
 
