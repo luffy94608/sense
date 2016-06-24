@@ -47,7 +47,7 @@ $(document).ready(function () {
         initSiteMapAnimation:function () {
             var opts = {
                 target:'.sn-sm-item .info,.snphc-link>a,.animate_hover_move',
-                left:'15px',
+                left:'15px'
             };
             $(document).on('mouseover',opts.target,function () {
                 var $this = $(this);
@@ -64,7 +64,7 @@ $(document).ready(function () {
         initTabChangeEvent:function () {
             var opts = {
                 target:$('.sn-nav-tabs>li'),
-                targetCon:$('.sn-tab-content>div'),
+                targetCon:$('.sn-tab-content>div')
             };
             opts.target.find('a').click(function () {
                 var $this = $(this);
@@ -92,9 +92,9 @@ $(document).ready(function () {
         initRecruitLiEvent:function () {
             var opts = {
                 target:$('.sn-wr-list>li'),
-                targetCon:'.sn-wrl-desc',
+                targetCon:'.sn-wrl-desc'
             };
-            opts.target.unbind().bind('click',function () {
+            opts.target.bind('click',function () {
                 var $this = $(this);
                 if($(opts.targetCon,$this).html()==0){
                     return false;
@@ -149,7 +149,7 @@ $(document).ready(function () {
                     'http://www.hikvision.com/cn/index.html',
                     'http://www.hollysys.com',
                     'http://www.hikvision.com/cn/index.html',
-                    'http://eabax.com',
+                    'http://eabax.com'
                 ]
             };
             $(document).on('click',opts.targetParent,function () {
@@ -180,31 +180,31 @@ $(document).ready(function () {
          * 初始化轮播 swiper
          */
         initSwiperEvent : function () {
-            var mySwiper = new Swiper('.swiper-slide-container', {
-                autoplay: 3000,//可选选项，自动滑动
-                loop : true,
-                effect : 'fade',
-                pagination: '.swiper-pagination',
-                // paginationClickable: true,
-                spaceBetween: 30,
-                fade: {
-                    crossFade: true,
-                },
-                prevButton:'.swiper-button-prev',
-                nextButton:'.swiper-button-next',
+            if(typeof Swiper == 'function'){
+                var mySwiper = new Swiper('.swiper-slide-container', {
+                    autoplay: 3000,//可选选项，自动滑动
+                    loop : true,
+                    effect : 'fade',
+                    pagination: '.swiper-pagination',
+                    // paginationClickable: true,
+                    spaceBetween: 30,
+                    fade: {
+                        crossFade: true
+                    },
+                    prevButton:'.swiper-button-prev',
+                    nextButton:'.swiper-button-next'
 
-            });
+                });
 
-            var mySwiper2 = new Swiper('.sn-partners-slide', {
-                paginationClickable: true,
-                slidesPerView: 5,
-                spaceBetween: 30,
-                prevButton:'.swiper-button-prev',
-                nextButton:'.swiper-button-next',
+                var mySwiper2 = new Swiper('.sn-partners-slide', {
+                    paginationClickable: true,
+                    slidesPerView: 5,
+                    spaceBetween: 30,
+                    prevButton:'.swiper-button-prev',
+                    nextButton:'.swiper-button-next'
 
-            });
-
-
+                });
+            }
         },
         /**
          * 返回顶部
@@ -219,7 +219,7 @@ $(document).ready(function () {
             window.onscroll = function(){
                 var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
                 oTop.style.top = screenh - oTop.offsetHeight + scrolltop +"px";
-            }
+            };
             oTop.onclick = function(){
                 document.documentElement.scrollTop = document.body.scrollTop =0;
             };
@@ -382,7 +382,7 @@ $(document).ready(function () {
                     //登录
                     login:'http://developer.senseshield.com/auth/',
                     register:'http://developer.senseshield.com/auth/register.jsp',
-                    area:'http://www.senselock.com/en/index.php',
+                    area:'http://www.senselock.com/en/index.php'
                 }
             };
             // JavaScript Document
@@ -415,7 +415,7 @@ $(document).ready(function () {
         },
 
         /**
-         *
+         *首页menu 浮动
          */
         initHomeFixed:function () {
           var url = window.location.href;
@@ -425,9 +425,14 @@ $(document).ready(function () {
                 $('.sn-header').css('position','fixed');
             }
         },
-
+        /**
+         * 表格颜色间隔
+         */
+        initTableGapColor: function () {
+            $(".sn-ld-params tr:nth-child(odd)").addClass("odd");
+        },
         run : function () {
-            initPage.initBrowserVerision();
+            // initPage.initBrowserVerision();
             initPage.initMenuSlide();
             initPage.initSwiperEvent();
             initPage.initPartnersAnimation();
@@ -438,6 +443,7 @@ $(document).ready(function () {
             initPage.initQQ();
             initPage.initTabChangeEvent();
             initPage.initRecruitLiEvent();
+            initPage.initTableGapColor();
             initPage.initHomeFixed();
             setTimeout(function () {
                 initPage.initScrollTop();

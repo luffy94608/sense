@@ -138,6 +138,7 @@
       position: absolute;
       top: 25px;
       left: 0;
+      width: 100%;
       right: 0;
       color: $text-5;
       font-size: 30px;
@@ -170,7 +171,7 @@
       font-size: 30px;
     }
   }
-}
+}h
 
 //通过解决方案页面样式
 .sn-common-list{
@@ -187,6 +188,8 @@
     color: $text-2;
     font-size: 16px;
     white-space: pre-line;
+    *white-space: pre;/* IE */
+    word-wrap: break-word; /* IE */
   }
 }
 .sn-bg-section{

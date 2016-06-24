@@ -152,6 +152,9 @@
   .sn-ld-params{
     width: 100%;
     margin: 10px 0 20px;
+    tr.odd{
+      background-color: $bg-color-5;
+    }
     tr:nth-of-type(odd){
       background-color: $bg-color-5;
     }
@@ -180,32 +183,40 @@
     }
   }
   .sn-input-inline{
-    display: inline-block;
+    display: block;
+    float: left;
     margin-right: 40px;
+    @extend .clear-fix;
   }
   .sn-input-group{
-    display: table;
+    display: block;
     border: 1px solid $border-color;
     width: 450px;
     padding: 10px 0 10px 10px;
     margin: 10px 0;
     overflow: hidden;
+    @extend .clear-fix;
     @include box-sizing(border-box);
-    label,input{
-      display: table-cell;
+    &>label{
+      display: block;
       color: $text-3;
       font-size: 14px;
       outline: none;
-      border: none;
-    }
-    &>label{
+      float: left;
       width: 50px;
       &.width-80{
         width: 80px;
       }
     }
     &>input{
-      width: 100%;
+      display: block;
+      float: left;
+      width: 355px;
+      border: none;
+      border: 0;
+      color: $text-3;
+      font-size: 14px;
+      outline: none;
     }
   }
   .sn-ld-textarea{

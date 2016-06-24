@@ -1,17 +1,15 @@
-@charset "UTF-8";
-// we style
-//公司资质 或知识产权
+
 .sn-we-ipr{
   .swi-list{
-    margin: 20px 0 40px;
     &>li{
-      display: inline-block;
+      text-align: center;
       float: left;
       width: 235px;
       margin: 10px;
       .swi-pic{
+        height: 320px;
+        overflow: hidden;
         padding: 10px;
-        @include box-sizing(border-box);
         border: 1px solid $border-color;
         img{
           width: 100%;
@@ -23,14 +21,15 @@
       .swi-desc{
         font-size: 14px;
         color: $text-3;
-        margin: 20px 0;
+        height: 60px;
+        line-height: 60px;
       }
     }
     &.property-list{
       &>li{
         width: 320px;
         .swi-pic{
-          height: 239px;
+          height: 215px;
           overflow: hidden;
           &:hover{
             border: 1px solid $border-color;
@@ -43,7 +42,11 @@
 
 //诚聘精英
 .sn-we-rct{
-  .sn-wr-list{
+  .sn-wr-list, .sn-wrn-list{
+    a{
+      display: block;
+      width: 100%;
+    }
     li{
       padding-left: 30px;
       @include transition(all ease .3s);
@@ -88,9 +91,11 @@
         }
         .sn-wlh-time{
           font-size: 16px;
-          color: $text-1;
-          float: right;
+          color: $text-2;
           margin-right: 40px;
+          position: absolute;
+          right: 40px;
+          top: 20px;
         }
       }
       .sn-wrl-desc{
@@ -127,6 +132,8 @@
             color: $text-2;
             font-size: 14px;
             white-space: pre-line;
+            *white-space: pre;/* IE */
+            word-wrap: break-word; /* IE */
             line-height: 20px;
           }
         }
@@ -154,6 +161,7 @@
   .sn-wen-title{
     color: $text-1;
     font-size: 24px;
+    margin: 20px 0;
     font-weight: bolder;
     text-align: center;
   }
@@ -162,5 +170,8 @@
     font-size: 16px;
     line-height: 2;
     white-space: pre-line;
+    *white-space: pre;/* IE */
+    word-wrap: break-word; /* IE */
+
   }
 }
