@@ -94,7 +94,7 @@ $(document).ready(function () {
                 target:$('.sn-wr-list>li'),
                 targetCon:'.sn-wrl-desc'
             };
-            opts.target.bind('click',function () {
+            opts.target.unbind().bind('click',function () {
                 var $this = $(this);
                 if($(opts.targetCon,$this).html()==0){
                     return false;
@@ -361,7 +361,7 @@ $(document).ready(function () {
             };
             // JavaScript Document
             $(document).on('click',opts.target,function () {
-                var type = $(this).data('url');
+                var type = $(this).attr('data-url');
                 var url = opts.urlMap[type];
                 if(url){
                     window.location.href=url;
