@@ -405,6 +405,65 @@ $(document).ready(function () {
         initTableGapColor: function () {
             $(".sn-ld-params tr:nth-child(odd)").addClass("odd");
         },
+        initTryAndBuyEvent: function () {
+            $('.js_try_buy_submit_btn').unbind().bind('click',function () {
+                var obj = $(".js_try_buy_form");
+                var params = {
+                    name:$.trim($('input[name=name]',obj).val()),
+                    email:$.trim($('input[name=email]',obj).val()),
+                    mobile:$.trim($('input[name=mobile]',obj).val()),
+                    company:$.trim($('input[name=company]',obj).val()),
+                    type:$.trim($('input[name=type]',obj).val()),
+                    commodity:'精锐5-试用版',
+                    desc:$.trim($('textarea[name=desc]',obj).val())
+                };
+                if(!params.name){
+                    alert('请输入姓名');
+                    return false;
+                }
+                if(!params.email){
+                    alert('请输入邮箱');
+                    return false;
+                }
+                if(!params.mobile){
+                    alert('请输入电话');
+                    return false;
+                }
+                if(!params.company){
+                    alert('请输入公司名称');
+                    return false;
+                }
+                if(!params.type){
+                    alert('请输入软件类别');
+                    return false;
+                }
+                if(!params.desc){
+                    alert('请输入您对加密锁的要求');
+                    return false;
+                }
+                $.ajax({
+                    //提交数据的类型 POST GET
+                    type:"POST",
+                    //提交的网址
+                    url:"buy.php",
+                    //提交的数据
+                    data:params,
+                    //返回数据的格式
+                    datatype: "json",//"xml", "html", "script", "json", "jsonp", "text".
+                    //成功返回之后调用的函数
+                    success:function(data){
+                        alert('申请成功');
+                    },
+                    //调用出错执行的函数
+                    error: function(){
+                        //请求出错处理
+                        alert('操作失败请稍候再试!');
+                    }
+                });
+            });
+
+
+        },
         run : function () {
             // initPage.initBrowserVerision();
             initPage.initMenuSlide();
@@ -418,6 +477,7 @@ $(document).ready(function () {
             initPage.initRecruitLiEvent();
             initPage.initTableGapColor();
             initPage.initHomeFixed();
+            initPage.initTryAndBuyEvent();
             setTimeout(function () {
                 initPage.initScrollTop();
             },300)

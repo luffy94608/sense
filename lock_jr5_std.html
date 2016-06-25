@@ -123,29 +123,30 @@
                 </div>
                 <div id="tab_3" class="sn-tab-pane ">
                     <p class="sn-ld-section-title ">基本信息</p>
+                    <form class="js_try_buy_form">
                     <div class="clear-fix margin-t-20">
                         <div class="sn-input-inline">
                             <div class="sn-input-group">
                                 <label>姓名：</label>
-                                <input type="text" placeholder="请填写您的真实姓名">
+                                <input type="text" name="name" placeholder="请填写您的真实姓名">
                             </div>
                         </div>
                         <div class="sn-input-inline">
                             <div class="sn-input-group">
                                 <label>邮箱：</label>
-                                <input type="text" placeholder="请填写您的真实邮箱">
+                                <input type="text" name="email" placeholder="请填写您的真实邮箱">
                             </div>
                         </div>
                         <div class="sn-input-inline">
                             <div class="sn-input-group">
                                 <label>电话：</label>
-                                <input type="text" placeholder="请填写您的有效电话">
+                                <input type="text" name="mobile" placeholder="请填写您的有效电话">
                             </div>
                         </div>
                         <div class="sn-input-inline">
                             <div class="sn-input-group">
                                 <label class="width-80">公司名称：</label>
-                                <input type="text" placeholder="请填写您的公司名称">
+                                <input type="text" name="company" placeholder="请填写您的公司名称">
                             </div>
                         </div>
                     </div>
@@ -154,12 +155,13 @@
                     <p class="margin-t-20">精锐5-试用版</p>
                     <p class="sn-ld-section-title margin-t-20">软件的类别</p>
                     <div class="sn-input-group height-45 margin-t-20">
-                        <input type="text" placeholder="请填写您的软件类别，例如：游戏软件">
+                        <input type="text" name="type" placeholder="请填写您的软件类别，例如：游戏软件">
                     </div>
                     <p class="sn-ld-section-title">您对加密锁的要求</p>
-                    <textarea class="sn-ld-textarea" rows="10" placeholder="请填写你对加密锁的要求，请如实填写。"></textarea>
+                    <textarea class="sn-ld-textarea" name="desc" rows="10" placeholder="请填写你对加密锁的要求，请如实填写。"></textarea>
+                    </form>
                     <div class="sn-ld-btn-list text-center">
-                        <button class="sn-ld-btn center">申请试用</button>
+                        <button class="sn-ld-btn center js_try_buy_submit_btn">申请试用</button>
                     </div>
                 </div>
                 <div id="tab_4" class="sn-tab-pane ">
