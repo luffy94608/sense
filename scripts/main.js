@@ -180,37 +180,12 @@ $(document).ready(function () {
          * 初始化轮播 swiper
          */
         initSwiperEvent : function () {
-            if(typeof Swiper == 'function'){
-                var mySwiper = new Swiper('.swiper-slide-container', {
-                    autoplay: 3000,//可选选项，自动滑动
-                    loop : true,
-                    effect : 'fade',
-                    pagination: '.swiper-pagination',
-                    // paginationClickable: true,
-                    spaceBetween: 30,
-                    fade: {
-                        crossFade: true
-                    },
-                    prevButton:'.swiper-button-prev',
-                    nextButton:'.swiper-button-next'
-
-                });
-
-                var mySwiper2 = new Swiper('.sn-partners-slide', {
-                    paginationClickable: true,
-                    slidesPerView: 5,
-                    spaceBetween: 30,
-                    prevButton:'.swiper-button-prev',
-                    nextButton:'.swiper-button-next'
-
-                });
-            }
+            
         },
         /**
          * 返回顶部
          */
         initScrollTop :function () {
-
             var oTop = document.getElementById("sn_go_top");
             var screenw = document.documentElement.clientWidth || document.body.clientWidth;
             var screenh = document.documentElement.clientHeight || document.body.clientHeight;
