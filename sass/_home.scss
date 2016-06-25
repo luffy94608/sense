@@ -164,13 +164,15 @@
 .sn-phc-item{
   position: relative;
   padding: 30px 0;
+  .sn_phc_menu{
+    position: relative;
+  }
   .snphc-desc{
     width: 500px;
     .sn-phcd-center{
       position: absolute;
       top: 50%;
       width: 500px;
-      @include transform(translateY(-50%));
       .snphc-tag{
         width: 192px;
         height: 107px;

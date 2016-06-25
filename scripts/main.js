@@ -177,12 +177,6 @@ $(document).ready(function () {
             });
         },
         /**
-         * 初始化轮播 swiper
-         */
-        initSwiperEvent : function () {
-            
-        },
-        /**
          * 返回顶部
          */
         initScrollTop :function () {
@@ -204,7 +198,14 @@ $(document).ready(function () {
          * 修正 sn-phc-item 高度
          */
         initFixedSnPhcItemHeight :function () {
-            $('.sn-phc-item .snphc-desc').height($('.sn-phc-item .sn-phcd-center').height());
+            var height = $('.sn-phc-item .sn-phcd-center').height();
+            var halfHeight = '-'+parseInt(height/2)+'px';
+            var style = {
+                height: height,
+                marginTop:halfHeight
+            };
+            $('.sn-phc-item .snphc-desc').height(height);
+            $('.sn-phc-item .snphc-desc .sn-phcd-center').css(style);
         },
         /**
          * 初始化首页列表切换动画
@@ -235,52 +236,50 @@ $(document).ready(function () {
                 othersLi.removeClass('active');
                 $(this).parents('li').removeClass('active').addClass('active');
 
-                e.preventDefault();
+                if(e && e.preventDefault){
+                    e.preventDefault();
+                }else{
+                    window.event.returnValue = false;//注意加window
+                }
                 e.stopPropagation();
                 if(!status){
                     var len=$('.sn_phc_menu').length;
                     if(len>0){
                         for (var i=0;i<len;i++){
                             var tmp=$('.sn_phc_menu').eq(i);
-                            tmp.data('position',tmp.offset().top);
+                            tmp.attr('data-position',tmp.offset().top);
                         }
                     }
                     status= true;
                 }
                 var initObj = $('.sn_phc_menu').eq(0);
                 var initId = '#'+initObj.attr('id');
-                var srcId = initObj.data('id');
+                var srcId = initObj.attr('data-id');
                 if(!srcId){
                     srcId = initId;
                 }
                 var srcPTop = $(srcId).offset().top;
                 var id = $(this).attr('href');
                 var targetTop = $(id).offset().top;
-                var srcPosition= $(srcId).data('position');
-                var targetPosition= $(id).data('position');
+                var srcPosition= parseInt($(srcId).attr('data-position'));
+                var targetPosition= parseInt($(id).attr('data-position'));
 
                 var diffSHeight = targetTop - srcPosition;
                 var diffTHeight = srcPTop - targetPosition;
-                initObj.data('id',id);
-                move(srcId)
-                    .set('opacity', '0.5')
-                    .y(diffSHeight)
-                    .end(function () {
-                        move(srcId)
-                            .set('opacity', '1')
-                            .duration(1000)
-                            .end();
-                    });
-                move(id)
-                    .set('opacity', '0.5')
-                    .y(diffTHeight)
-                    .end(function () {
-                        move(id)
-                            .set('opacity', '1')
-                            .duration(1000)
-                            .end();
-                    });
+                initObj.attr('data-id',id);
+                $(srcId).animate({
+                    'opacity': 0.5,
+                    'top': diffSHeight
+                },function () {
+                    $(this).css('opacity',1);
+                });
 
+                $(id).animate({
+                    'opacity': 0.5,
+                    'top': diffTHeight
+                },function () {
+                   $(this).css('opacity',1);
+                });
             });
 
         },
@@ -409,7 +408,6 @@ $(document).ready(function () {
         run : function () {
             // initPage.initBrowserVerision();
             initPage.initMenuSlide();
-            initPage.initSwiperEvent();
             initPage.initPartnersAnimation();
             initPage.initSiteMapAnimation();
             initPage.initLocationUrlEvent();
