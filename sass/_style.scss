@@ -33,6 +33,11 @@ a{
   height: $height;
   //@include opacity(0.9);
   z-index: 10;
+  .logo_a{
+    display: block;
+    float: left;
+    height: 70px;
+  }
   .logo{
     padding-top: 9px;
     img{
