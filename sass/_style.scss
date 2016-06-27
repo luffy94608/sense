@@ -111,11 +111,16 @@ a{
         left : 0;
         z-index: 0;
         display: none;
-        .icon-angle-right{
+        .sn-arrow-right{
           position: absolute;
           font-size: 24px;
-          top: 11px;
+          top: 17px;
+          *top: 16px;
           right: 10px;
+          width: 16px;
+          height: 16px;
+
+          background: url("../images/arrow_right.png") no-repeat center;
         }
         li>.sub-child-menu{
           @extend  .sub-menu;

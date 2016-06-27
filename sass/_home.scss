@@ -283,15 +283,16 @@
       .sn-wr-arrow{
         display: block;
         position: absolute;
-        top: 7px;
+        top: 20px;
+        *top: 15px;
         left: 105px;
-        width: 32px;
-        height: 32px;
+        width: 16px;
+        height: 16px;
         background: url("../images/arrow_down.png") no-repeat center;
         *background: none;
-        @include background-size(32px 32px);
+        @include background-size(16px 16px);
         filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                        src='../images/arrow_down.png',
+                        src='../images/arrow_down_16.png',
                         sizingMethod='scale');
       }
       &>li{

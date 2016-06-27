@@ -360,7 +360,7 @@ $(document).ready(function () {
                 }
             };
             // JavaScript Document
-            $(document).on('click',opts.target,function () {
+            $(opts.target).unbind().bind('click',function () {
                 var type = $(this).attr('data-url');
                 var url = opts.urlMap[type];
                 if(url){
