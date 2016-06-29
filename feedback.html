@@ -30,22 +30,20 @@
 
     <section class="sn-feedback margin-t-50">
         <div class="wrap text-left clear-fix">
-            <div class="sn-fd-form">
-                <form method="post" action="yj.asp">
-                    <div class="sm-fdf-item fl">
-                        <p>姓名</p>
-                        <input type="text" name="Name" placeholder="请输入真实姓名" required>
-                    </div>
-                    <div class="sm-fdf-item fl">
-                        <p>邮箱</p>
-                        <input type="text" name="Mail" placeholder="请输入合法的邮箱" required>
-                    </div>
-                    <div class="sm-fdf-item full">
-                        <p>留言</p>
-                        <textarea name="Context" required placeholder="请输入留言内容"></textarea>
-                    </div>
-                    <button class="sm-fdf-btn" type="submit">提交</button>
-                </form>
+            <div class="sn-fd-form feedback_form">
+                <div class="sm-fdf-item fl">
+                    <p>姓名</p>
+                    <input type="text" name="name" placeholder="请输入真实姓名" required>
+                </div>
+                <div class="sm-fdf-item fl">
+                    <p>邮箱</p>
+                    <input type="text" name="email" placeholder="请输入合法的邮箱" required>
+                </div>
+                <div class="sm-fdf-item full">
+                    <p>留言</p>
+                    <textarea name="content" required placeholder="请输入留言内容"></textarea>
+                </div>
+                <button class="sm-fdf-btn feedback_submit_btn" type="button">提交</button>
             </div>
             <div class="sn-fd-info margin-t-50">
                 <p><img src="images/feedback/email.png">sales@sense.com.cn</p>

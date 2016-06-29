@@ -464,6 +464,52 @@ $(document).ready(function () {
 
 
         },
+        initFeedBackEvent: function () {
+            $('.feedback_submit_btn').unbind().bind('click',function () {
+                var obj = $(".feedback_form");
+                var params = {
+                    name:$.trim($('input[name=name]',obj).val()),
+                    email:$.trim($('input[name=email]',obj).val()),
+                    content:$.trim($('textarea[name=content]',obj).val())
+                };
+                if(!params.name){
+                    alert('请输入姓名');
+                    return false;
+                }
+                if(!params.email){
+                    alert('请输入邮箱');
+                    return false;
+                }
+                if(!params.content){
+                    alert('请输入留言内容');
+                    return false;
+                }
+                $.ajax({
+                    //提交数据的类型 POST GET
+                    type:"POST",
+                    //提交的网址
+                    url:"feedback.php",
+                    //提交的数据
+                    data:params,
+                    //返回数据的格式
+                    datatype: "json",//"xml", "html", "script", "json", "jsonp", "text".
+                    //成功返回之后调用的函数
+                    success:function(data){
+                        alert('反馈成功');
+                        $('input[name=name]',obj).val('');
+                        $('input[name=email]',obj).val('');
+                        $('textarea[name=content]',obj).val('');
+                    },
+                    //调用出错执行的函数
+                    error: function(){
+                        //请求出错处理
+                        alert('操作失败请稍候再试!');
+                    }
+                });
+            });
+
+
+        },
         run : function () {
             // initPage.initBrowserVerision();
             initPage.initMenuSlide();
@@ -478,6 +524,7 @@ $(document).ready(function () {
             initPage.initTableGapColor();
             initPage.initHomeFixed();
             initPage.initTryAndBuyEvent();
+            initPage.initFeedBackEvent();
             setTimeout(function () {
                 initPage.initScrollTop();
             },300)
