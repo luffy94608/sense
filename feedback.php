@@ -79,8 +79,8 @@ if(!in_array(false,$params,true))
             $params['email'],
             $params['content']);
     $mail =  new MyPhpMailerUtil2();
-    $to = "29620639@qq.com";
-//    $to = "sense@sense.com.cn";
+//    $to = "29620639@qq.com";
+    $to = "sense@sense.com.cn";
     $mail->AddAddress($to);
     $mail->Body=$content;
     $result = $mail->send();
